@@ -6,11 +6,12 @@
 #    By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2024/01/25 15:34:53 by niabraha         ###   ########.fr        #
+#    Updated: 2024/01/30 14:49:13 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILES = main_push_swap.c \
+		parsing_error.c
 
 NAME = push_swap
 CFLAGS = -Wall -Werror -Wextra

@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   parsing_error.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/01/30 14:56:03 by niabraha         ###   ########.fr       */
+/*   Created: 2024/01/30 14:48:19 by niabraha          #+#    #+#             */
+/*   Updated: 2024/01/30 14:56:24 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
 
-
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdlib.h>
-
-#endif
+void    parsing_error(void)
+{
+    write(1, "Error\n", 6);
+}
