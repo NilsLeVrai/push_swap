@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_push_swap.c                                   :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 15:34:33 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/01 15:22:24 by niabraha         ###   ########.fr       */
+/*   Created: 2023/10/17 13:08:50 by niabraha          #+#    #+#             */
+/*   Updated: 2024/02/01 15:09:22 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main (int argc, char **argv)
+int	ft_atoi(const char *nptr)
 {
-	int nb_args;
+	long int	res;
+	int			neg;
+	int			i;
 
-	nb_args = 1;
-	if (argc < 2)
-		write(1, "Error\n", 6);
-	while (nb_args < argc)
+	res = 0;
+	neg = 1;
+	i = 0;
+	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == 43 || nptr[i] == 45)
 	{
-		
-		nb_args++;
+		if (nptr[i] == 45)
+			neg *= (-1);
+		i++;
 	}
+	while (nptr[i] >= 48 && nptr[i] <= 57)
+	{
+		res = res * 10 + nptr[i] - 48;
+		i++;
+	}
+	return (res * neg);
 }
