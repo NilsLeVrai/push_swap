@@ -6,12 +6,12 @@
 #    By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2024/02/01 15:09:56 by niabraha         ###   ########.fr        #
+#    Updated: 2024/02/06 15:28:51 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILES = main_push_swap.c \
-		parsing_error.c \
+FILES = parsing_error.c \
+		pipex.c \
 		ft_atoi.c 
 
 NAME = push_swap
