@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/06 15:40:40 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/06 17:27:36 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int	ft_atoi(const char *nptr);
 struct poly* ft_create_list(int argc, char **argv);
 void add_to_list(struct poly** head_tmp, int value);
 void parsing_error(int argc, char **argv);
+void check_number_args(int argc);
 
 #endif

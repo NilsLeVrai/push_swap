@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:34:33 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/06 17:03:26 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/06 17:25:34 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main (int argc, char **argv)
 	nb_args = 0;
 	stack_a = NULL;
 	stack_b = NULL;
-	parsing_error(argc, argv);
+	check_number_args(argc);
 	stack_a = ft_create_list(argc, argv);
 	if (argc < 2)
 		exit(0);

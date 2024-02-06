@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 14:48:19 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/06 17:10:29 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/06 17:23:36 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,20 +47,10 @@ struct poly* ft_create_list(int argc, char **argv)
 	return (head);
 }
 
-void check_duplicates(int argc, char **argv)
-{
-	
-}
-
 void check_number_args(int argc)
 {
 	if (argc < 2)
 		exit(EXIT_FAILURE);
 }
 
-void parsing_error(int argc, char **argv)
-{
-	check_number_args(argc);
-	check_duplicates(argc, argv);
-}
 
