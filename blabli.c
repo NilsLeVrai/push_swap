@@ -1,11 +1,12 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
 // Define the structure for a node
-struct poly {
+typedef struct poly {
     int data;
     struct poly* next;
-};
+} mono;
 
 // Function to append a new node at the end of the list
 void append(struct poly** head_ref, int new_data) {
@@ -63,7 +64,6 @@ int main(int argc, char* argv[]) {
     // Print the linked list
     printf("Linked list created: ");
     print_linked_list(head);
-	printf("yo ma gueule%d\n", node->data);
 
     return 0;
 }

@@ -6,11 +6,11 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:08:50 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/01 15:09:22 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/14 16:16:10 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_header.h"
 
 int	ft_atoi(const char *nptr)
 {
