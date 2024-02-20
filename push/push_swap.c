@@ -6,52 +6,54 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 16:47:11 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:41:09 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void append(struct poly** head_ref, int new_data)
+void	append(struct s__list **head_ref, int new_data)
 {
-    struct poly* mono = (struct poly*)malloc(sizeof(struct poly));
-    struct poly* last = *head_ref;  
-    mono->value = new_data;
-    mono->next = NULL;
+	struct s__list	*t_list;
+	struct s__list	*last;
 
-    if (*head_ref == NULL)
+	t_list = (struct s__list *) malloc(sizeof(struct s__list));
+	last = *head_ref;
+	t_list->value = new_data;
+	t_list->next = NULL;
+	if (*head_ref == NULL)
 	{
-        *head_ref = mono;
-        return ;
-    }
-    while (last->next != NULL) 
-        last = last->next;
-    last->next = mono;
-    return ;
+		*head_ref = t_list;
+		return ;
+	}
+	while (last->next != NULL)
+		last = last->next;
+	last->next = t_list;
+	return ;
 }
 
-struct poly* create_linked_list(int argc, char* argv[])
+struct s__list	*create_linked_list(int argc, char **argv)
 {
-    struct poly* head;
-	int i;
-	int data;
+	struct s__list	*head;
+	int				i;
+	int				data;
 
 	head = NULL;
 	i = 1;
 	while (i < argc)
 	{
-        data = ft_atol(argv[i]); 
-        append(&head, data);
+		data = ft_atol(argv[i]);
+		append(&head, data);
 		i++;
-    }
-    return (head);
+	}
+	return (head);
 }
 
-void print_linked_list(struct poly* node)
+void	print_linked_list(struct s__list *node)
 {
-    while (node != NULL)
+	while (node != NULL)
 	{
-        printf("%d ", node->value);
-        node = node->next;
-    }
+		printf("%d ", node->value);
+		node = node->next;
+	}
 }

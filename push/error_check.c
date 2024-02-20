@@ -6,17 +6,16 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:13:36 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 18:00:43 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:25:19 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-
-void check_duplicates(int argc, char **argv)
+void	check_duplicates(int argc, char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (i < argc)
@@ -32,9 +31,9 @@ void check_duplicates(int argc, char **argv)
 	}
 }
 
-void check_outrange_int(int argc, char **argv)
+void	check_outrange_int(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (i < argc)
@@ -44,10 +43,11 @@ void check_outrange_int(int argc, char **argv)
 		i++;
 	}
 }
-void check_not_number(int argc, char **argv)
+
+void	check_not_number(int argc, char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (i < argc)
@@ -62,13 +62,15 @@ void check_not_number(int argc, char **argv)
 		i++;
 	}
 }
-void check_args(int argc, char **argv)
+
+void	check_args(int argc, char **argv)
 {
 	if (argc < 2 && argv[1] == NULL)
 		exit((write(2, "Error\n", 6), EXIT_FAILURE));
 	return ;
 }
-void error_check(int argc, char **argv)
+
+void	error_check(int argc, char **argv)
 {
 	check_args(argc, argv);
 	check_not_number(argc, argv);

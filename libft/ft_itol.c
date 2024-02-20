@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 16:31:00 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 16:48:19 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:21:55 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 long	ft_itol(int i)
 {
-	long nb;
+	long	nb;
 
 	nb = (long) i;
 	return (nb);
