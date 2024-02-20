@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 18:53:08 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:55:28 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ struct s__list	*create_linked_list(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		data = ft_atol(argv[i]);
+		data = ft_atoi(argv[i]);
 		append(&head, data);
 		i++;
 	}
