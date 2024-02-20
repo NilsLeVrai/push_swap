@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 15:34:33 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 17:08:11 by niabraha         ###   ########.fr       */
+/*   Created: 2024/02/20 16:31:00 by niabraha          #+#    #+#             */
+/*   Updated: 2024/02/20 16:49:22 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap_header.h"
+#include "libft.h"
 
-int main(int argc, char* argv[])
+long	ft_atol(const char *nptr)
 {
-    //struct poly* a_stack;
-	error_check(argc, argv);
-	//a_stack = create_linked_list(argc, argv);
-    //printf("List:\n");
-    //print_linked_list(a_stack);
+	long int	res;
+	int			neg;
+	int			i;
+
+	res = 0;
+	neg = 1;
+	i = 0;
+	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == 43 || nptr[i] == 45)
+	{
+		if (nptr[i] == 45)
+			neg *= (-1);
+		i++;
+	}
+	while (nptr[i] >= 48 && nptr[i] <= 57)
+	{
+		res = res * 10 + nptr[i] - 48;
+		i++;
+	}
+	return (res * neg);
 }

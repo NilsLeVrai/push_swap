@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 14:43:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/20 16:47:11 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ struct poly* create_linked_list(int argc, char* argv[])
 	i = 1;
 	while (i < argc)
 	{
-        data = ft_atoi(argv[i]); 
+        data = ft_atol(argv[i]); 
         append(&head, data);
 		i++;
     }

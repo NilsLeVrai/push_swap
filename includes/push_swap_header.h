@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 15:20:29 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/20 17:04:16 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ typedef struct poly {
 
 struct poly* create_linked_list(int argc, char* argv[]);
 void add_to_list(struct poly** head_tmp, int value);
-void parsing_error(int argc, char **argv);
-void check_number_args(int argc);
-void append(struct poly** head_ref, int new_data);
 void print_linked_list(struct poly* node);
 void check_args(int argc);
+void error_check(int argc, char **argv);
+void check_duplicates(struct poly* a_stack);
+void check_not_in_range(struct poly* a_stack);
+void check_not_int(struct poly* a_stack);
 
 #endif

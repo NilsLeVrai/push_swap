@@ -3,14 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+         #
+#    By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2023/11/09 17:28:28 by niabraha         ###   ########.fr        #
+#    Updated: 2024/02/20 16:48:41 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILES_PT1 = ft_atoi.c \
+			ft_atol.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
@@ -18,6 +19,7 @@ FILES_PT1 = ft_atoi.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_itol.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memcpy.c \
