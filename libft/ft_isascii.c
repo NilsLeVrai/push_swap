@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 15:34:33 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/14 16:43:12 by niabraha         ###   ########.fr       */
+/*   Created: 2023/10/17 13:19:10 by niabraha          #+#    #+#             */
+/*   Updated: 2023/11/09 17:25:34 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_header.h"
+#include "libft.h"
 
-int	main (int argc, char **argv)
+int	ft_isascii(int c)
 {
-	int		nb_args;
-	mono	*stack_a;
-	mono	*stack_b;
-
-	nb_args = 0;
-	stack_a = NULL;
-	stack_b = NULL;
-	check_number_args(argc);
-	stack_a = ft_create_list(argc, argv);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

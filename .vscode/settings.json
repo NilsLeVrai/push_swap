@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"type_traits": "c",
-		"push_swap_header.h": "c"
+		"push_swap_header.h": "c",
+		"stdio.h": "c"
 	}
 }
