@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 16:31:00 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 18:22:42 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/21 13:18:32 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 long	ft_atol(const char *nptr)
 {
-	long		res;
-	int			neg;
-	int			i;
+	long	res;
+	long	neg;
+	int		i;
 
 	res = 0;
 	neg = 1;

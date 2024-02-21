@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:13:36 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 18:25:19 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/21 13:42:59 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void	check_not_number(int argc, char **argv)
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
+			if (argv[i][j] == '-' || argv[i][j] == '+')
+				j++;
 			if (argv[i][j] < '0' || argv[i][j] > '9')
 				exit((write(2, "Error\n", 6), EXIT_FAILURE));
 			j++;
@@ -66,15 +68,15 @@ void	check_not_number(int argc, char **argv)
 void	check_args(int argc, char **argv)
 {
 	if (argc < 2 && argv[1] == NULL)
-		exit((write(2, "Error\n", 6), EXIT_FAILURE));
+		exit(EXIT_FAILURE);
 	return ;
 }
 
 void	error_check(int argc, char **argv)
 {
 	check_args(argc, argv);
-	check_not_number(argc, argv);
 	check_outrange_int(argc, argv);
+	check_not_number(argc, argv);
 	check_duplicates(argc, argv);
 	return ;
 }

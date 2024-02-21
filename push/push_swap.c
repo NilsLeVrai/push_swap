@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 18:50:53 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:58:17 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int argc, char **argv)
 {
-	//struct poly	*a_stack;
+	//struct s__list	*a_stack;
 	error_check(argc, argv);
 	//a_stack = create_linked_list(argc, argv);
 	//printf("List:\n");
