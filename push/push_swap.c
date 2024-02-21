@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/21 15:34:12 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/21 17:11:08 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,11 @@ int	main(int argc, char **argv)
 	b_stack = NULL;
 	b_stack++;
 	printf("Before:\n");
+	printf("A:\n");
 	print_linked_list(a_stack);
-	printf("After:\n");
-	sb(&a_stack);
+	pb(&a_stack, &b_stack);
+	printf("A:\n");
 	print_linked_list(a_stack);
+	printf("B:\n");
+	print_linked_list(b_stack);
 }

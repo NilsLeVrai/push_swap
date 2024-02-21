@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/21 16:32:06 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/21 16:55:43 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,16 @@ void		check_duplicates(int argc, char **argv);
 void		check_not_number(int argc, char **argv);
 void		check_outrange_int(int argc, char **argv);
 
+void		pa(t_mono **a_stack, t_mono **b_stack);
+void		pb(t_mono **a_stack, t_mono **b_stack);
+void		ra(t_mono **a_stack);
+void		rb(t_mono **b_stack);
+void		rr(t_mono **a_stack, t_mono **b_stack);
+void		rra(t_mono **a_stack);
+void		rrb(t_mono **b_stack);
+void		rrr(t_mono **a_stack, t_mono **b_stack);
 void		sa(t_mono **a_stack);
 void		sb(t_mono **b_stack);
+void		ss(t_mono **a_stack, t_mono **b_stack);
 
 #endif
