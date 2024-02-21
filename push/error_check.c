@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:13:36 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/21 13:42:59 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/21 13:48:47 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,6 @@ void	check_duplicates(int argc, char **argv)
 	}
 }
 
-void	check_outrange_int(int argc, char **argv)
-{
-	int	i;
-
-	i = 1;
-	while (i < argc)
-	{
-		if (ft_atol(argv[i]) > 2147483647 || ft_atol(argv[i]) < -2147483648)
-			exit((write(2, "Error\n", 6), EXIT_FAILURE));
-		i++;
-	}
-}
-
 void	check_not_number(int argc, char **argv)
 {
 	int	i;
@@ -61,6 +48,19 @@ void	check_not_number(int argc, char **argv)
 				exit((write(2, "Error\n", 6), EXIT_FAILURE));
 			j++;
 		}
+		i++;
+	}
+}
+
+void	check_outrange_int(int argc, char **argv)
+{
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (ft_atol(argv[i]) > 2147483647 || ft_atol(argv[i]) < -2147483648)
+			exit((write(2, "Error\n", 6), EXIT_FAILURE));
 		i++;
 	}
 }

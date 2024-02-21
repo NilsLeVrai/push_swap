@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/21 15:34:12 by niabraha         ###   ########.fr       */
+/*   Created: 2024/02/21 16:49:45 by niabraha          #+#    #+#             */
+/*   Updated: 2024/02/21 16:49:55 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-int	main(int argc, char **argv)
+void	rra(t_mono **a_stack)
 {
-	struct poly	*a_stack;
-	struct poly	*b_stack;
+	t_mono	*tmp;
+	t_mono	*last;
 
-	error_check(argc, argv);
-	a_stack = create_linked_list(argc, argv);
-	b_stack = NULL;
-	b_stack++;
-	printf("Before:\n");
-	print_linked_list(a_stack);
-	printf("After:\n");
-	sb(&a_stack);
-	print_linked_list(a_stack);
+	tmp = *a_stack;
+	if (*a_stack && (*a_stack)->next)
+	{
+		while (tmp->next->next)
+			tmp = tmp->next;
+		last = tmp->next;
+		tmp->next = NULL;
+		last->next = *a_stack;
+		*a_stack = last;
+	}
 }

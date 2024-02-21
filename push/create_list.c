@@ -6,37 +6,37 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 18:55:28 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/21 16:31:30 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void	append(struct s__list **head_ref, int new_data)
+void	append(struct poly **head_ref, int new_data)
 {
-	struct s__list	*t_list;
-	struct s__list	*last;
+	struct poly	*t_mono;
+	struct poly	*last;
 
-	t_list = (struct s__list *) malloc(sizeof(struct s__list));
+	t_mono = (struct poly *) malloc(sizeof(struct poly));
 	last = *head_ref;
-	t_list->value = new_data;
-	t_list->next = NULL;
+	t_mono->data = new_data;
+	t_mono->next = NULL;
 	if (*head_ref == NULL)
 	{
-		*head_ref = t_list;
+		*head_ref = t_mono;
 		return ;
 	}
 	while (last->next != NULL)
 		last = last->next;
-	last->next = t_list;
+	last->next = t_mono;
 	return ;
 }
 
-struct s__list	*create_linked_list(int argc, char **argv)
+struct poly	*create_linked_list(int argc, char **argv)
 {
-	struct s__list	*head;
-	int				i;
-	int				data;
+	struct poly	*head;
+	int			i;
+	int			data;
 
 	head = NULL;
 	i = 1;
@@ -49,11 +49,12 @@ struct s__list	*create_linked_list(int argc, char **argv)
 	return (head);
 }
 
-void	print_linked_list(struct s__list *node)
+void	print_linked_list(struct poly *node)
 {
 	while (node != NULL)
 	{
-		printf("%d ", node->value);
+		printf("%d ", node->data);
 		node = node->next;
 	}
+	printf("\n");
 }

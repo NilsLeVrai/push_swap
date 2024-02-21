@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/20 18:42:22 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/21 16:32:06 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,23 @@
 # include <stdio.h>
 # include "../libft/libft.h"
 
-typedef struct s__list
+typedef struct poly
 {
-	int				value;
-	struct s__list	*next;
-}	t__list;
+	int			data;
+	struct poly	*next;
+	struct poly	*prev;
+}	t_mono;
 
-struct s__list	*create_linked_list(int argc, char **argv);
-void			add_to_list(struct s__list **head_tmp, int value);
-void			print_linked_list(struct s__list *node);
-void			check_args(int argc, char **argv);
-void			error_check(int argc, char **argv);
-void			check_duplicates(int argc, char **argv);
-void			check_not_number(int argc, char **argv);
-void			check_outrange_int(int argc, char **argv);
+struct poly	*create_linked_list(int argc, char **argv);
+void		print_linked_list(struct poly *node);
+void		append(struct poly **head_ref, int new_data);
+void		check_args(int argc, char **argv);
+void		error_check(int argc, char **argv);
+void		check_duplicates(int argc, char **argv);
+void		check_not_number(int argc, char **argv);
+void		check_outrange_int(int argc, char **argv);
+
+void		sa(t_mono **a_stack);
+void		sb(t_mono **b_stack);
 
 #endif

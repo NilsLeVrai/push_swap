@@ -6,19 +6,29 @@
 #    By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 14:25:31 by niabraha          #+#    #+#              #
-#    Updated: 2024/02/20 18:51:20 by niabraha         ###   ########.fr        #
+#    Updated: 2024/02/21 16:42:30 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME_C = checker
 NAME_P = push_swap
 
-
 _SRCS_C = main.c
 
 _SRCS_P = push_swap.c \
 			create_list.c \
-			error_check.c
+			error_check.c \
+			pa.c \
+			pb.c \
+			ra.c \
+			rb.c \
+			rr.c \
+			rra.c \
+			rrb.c \
+			rrr.c \
+			sa.c \
+			sb.c \
+			ss.c \
 
 SRCS_C_DIR = check
 SRCS_P_DIR = push
