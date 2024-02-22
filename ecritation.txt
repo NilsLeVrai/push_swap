@@ -65,3 +65,11 @@
 	print_linked_list(a_stack);
 	printf("End B:\n");
 	print_linked_list(b_stack);
+
+MAIN
+	printf("Beginning:\n");
+	printf("A: ");
+	print_linked_list(a_stack);
+	printf("B: ");
+	printf("\n");
+	print_linked_list(b_stack);

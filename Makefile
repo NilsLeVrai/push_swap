@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 14:25:31 by niabraha          #+#    #+#              #
-#    Updated: 2024/02/21 16:42:30 by niabraha         ###   ########.fr        #
+#    Updated: 2024/02/22 11:12:33 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ _SRCS_C = main.c
 _SRCS_P = push_swap.c \
 			create_list.c \
 			error_check.c \
+			sorting.c \
 			pa.c \
 			pb.c \
 			ra.c \

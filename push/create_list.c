@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/21 16:31:30 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/22 12:00:21 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	append(struct poly **head_ref, int new_data)
 
 	t_mono = (struct poly *) malloc(sizeof(struct poly));
 	last = *head_ref;
-	t_mono->data = new_data;
+	t_mono->value = new_data;
 	t_mono->next = NULL;
 	if (*head_ref == NULL)
 	{
@@ -53,7 +53,7 @@ void	print_linked_list(struct poly *node)
 {
 	while (node != NULL)
 	{
-		printf("%d ", node->data);
+		printf("%d ", node->value);
 		node = node->next;
 	}
 	printf("\n");

@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2024/02/20 16:48:41 by niabraha         ###   ########.fr        #
+#    Updated: 2024/02/22 14:31:22 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,15 @@ FILES_PT1 = ft_atoi.c \
 			ft_isdigit.c \
 			ft_isprint.c \
 			ft_itol.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstmap_bonus.c \
+			ft_lstnew_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstiter_bonus.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memcpy.c \
@@ -48,23 +57,12 @@ FILES_PT2 = ft_itoa.c \
 			ft_split.c \
 			ft_substr.c
 
-FILES_PT3 = ft_lstadd_back_bonus.c \
-			ft_lstadd_front_bonus.c \
-			ft_lstclear_bonus.c \
-			ft_lstdelone_bonus.c \
-			ft_lstlast_bonus.c \
-			ft_lstmap_bonus.c \
-			ft_lstnew_bonus.c \
-			ft_lstsize_bonus.c \
-			ft_lstiter_bonus.c
-
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc
 ARFLAGS = rcs
 
 OBJ = $(FILES_PT1:.c=.o) $(FILES_PT2:.c=.o) 
-OBJ_BONUS = $(FILES_PT3:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -81,7 +79,4 @@ fclean: clean
 	
 re: fclean all
 
-bonus: $(OBJ_BONUS)
-	$(AR) $(ARFLAGS) $(NAME) $^
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
