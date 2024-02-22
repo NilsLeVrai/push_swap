@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:49:18 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/21 16:49:24 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/02/22 11:02:18 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	rb(t_mono **b_stack)
 		*b_stack = (*b_stack)->next;
 		tmp->next = (*b_stack)->next;
 		(*b_stack)->next = tmp;
+		write(1, "rb\n", 3);
 	}
 }
