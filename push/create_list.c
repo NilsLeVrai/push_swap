@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/07 17:27:42 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/07 18:14:25 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,34 +59,7 @@ void	print_linked_list(struct poly *node)
 	printf("\n");
 }
 
-
-
-void	sort_index(struct poly *node)
+void sort_index(struct poly **head)
 {
-	int	lst_size;
-	int	index;
-	int i;
-
-	lst_size = lstsize(node);
-	index = 0;
-	i = 0;
-	while (lst_size > i)
-	{
-		while (node->next != NULL)
-		{
-			if (node->value > node->next->value)
-				node->next->index = index;
-			node = node->next;
-			index++;
-		}
-		i++;
-	}
-	while (node != NULL)
-	{
-		node->index = index;
-		index++;
-		printf("%d", node->index);
-		node = node->next;
-	}
 }
 	

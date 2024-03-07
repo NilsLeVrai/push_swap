@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/07 13:56:45 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/07 18:08:18 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main(int argc, char **argv)
 	print_linked_list(b_stack); // visual check
 	//sort(&a_stack, &b_stack);
 	write(1, "After indexing:\n", 17);
-	sort_index(a_stack); // visual check
-	sort_index(b_stack); // visual check
+	sort_index(&a_stack); // visual check
+	sort_index(&b_stack); // visual check
 }
