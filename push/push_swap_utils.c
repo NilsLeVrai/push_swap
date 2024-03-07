@@ -1,15 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 11:10:35 by niabraha          #+#    #+#             */
+/*   Created: 2024/03/07 14:03:16 by niabraha          #+#    #+#             */
+/*   Updated: 2024/03/07 14:03:44 by niabraha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void sort(t_mono **a_stack, t_mono **b_stack)
+int	ft_lstsize(t_list *lst)
 {
-	if 
+	int	i;
+
+	i = 0;
+	if (lst)
+	{
+		while (lst)
+		{
+			lst = lst->next;
+			i++;
+		}
+	}
+	return (i);
 }

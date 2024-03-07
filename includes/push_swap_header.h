@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/22 11:59:59 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:04:38 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,13 @@ typedef struct poly
 {
 	struct poly	*prev;
 	int			value;
+	int			index;
 	struct poly	*next;
 }	t_mono;
 
+int			ft_lstsize(t_mono *lst);
+int			find_lstmax(t_mono *lst);
+int			find_lstmin(t_mono *lst);
 struct poly	*create_linked_list(int argc, char **argv);
 void		print_linked_list(struct poly *node);
 void		append(struct poly **head_ref, int new_data);
@@ -35,6 +39,7 @@ void		check_duplicates(int argc, char **argv);
 void		check_not_number(int argc, char **argv);
 void		check_outrange_int(int argc, char **argv);
 void		sort(t_mono **a_stack, t_mono **b_stack);
+void		sort_index(struct poly *node);
 
 void		pa(t_mono **a_stack, t_mono **b_stack);
 void		pb(t_mono **a_stack, t_mono **b_stack);

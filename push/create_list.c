@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/22 12:00:21 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:02:50 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,3 +58,13 @@ void	print_linked_list(struct poly *node)
 	}
 	printf("\n");
 }
+
+
+void	sort_index(struct poly *node)
+{
+	int	lst_size;
+
+	lst_size = ft_lstsize(node);	
+	printf("%d ", node->index);
+}
+	
