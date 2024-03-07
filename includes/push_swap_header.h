@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/07 14:04:38 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/07 16:35:26 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct poly
 	struct poly	*next;
 }	t_mono;
 
-int			ft_lstsize(t_mono *lst);
+int			lstsize(struct poly *node);
 int			find_lstmax(t_mono *lst);
 int			find_lstmin(t_mono *lst);
 struct poly	*create_linked_list(int argc, char **argv);

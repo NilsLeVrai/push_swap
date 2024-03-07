@@ -6,24 +6,21 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:03:16 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/07 14:03:44 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/07 16:37:59 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-int	ft_lstsize(t_list *lst)
+int	lstsize(struct poly *node)
 {
 	int	i;
 
 	i = 0;
-	if (lst)
+	while (node != NULL)
 	{
-		while (lst)
-		{
-			lst = lst->next;
-			i++;
-		}
+		node = node->next;
+		i++;
 	}
 	return (i);
 }
