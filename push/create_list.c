@@ -6,13 +6,14 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/07 18:14:25 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/08 18:40:23 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void	append(struct poly **head_ref, int new_data)
+
+static void	append(struct poly **head_ref, int new_data)
 {
 	struct poly	*t_mono;
 	struct poly	*last;
@@ -53,13 +54,12 @@ void	print_linked_list(struct poly *node)
 {
 	while (node != NULL)
 	{
+		printf("list: \n");
 		printf("%d ", node->value);
+		printf("index: \n");
+		printf("%d ", node->index);
 		node = node->next;
 	}
 	printf("\n");
-}
-
-void sort_index(struct poly **head)
-{
 }
 	
