@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/08 18:38:49 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/09 21:00:17 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main(int argc, char **argv)
 {
-	struct poly	*a_stack;
-	struct poly	*b_stack;
+	struct val_index	*a_stack;
+	struct val_index	*b_stack;
 
 	error_check(argc, argv);
 	a_stack = create_linked_list(argc, argv);

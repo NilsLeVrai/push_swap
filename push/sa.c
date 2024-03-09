@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 15:01:26 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/22 10:46:00 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/09 21:00:51 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void	sa(t_mono **a_stack)
+void	sa(t_val_index **a_stack)
 {
-	t_mono	*tmp;
+	t_val_index	*tmp;
 
 	tmp = *a_stack;
 	if (*a_stack && (*a_stack)->next)
