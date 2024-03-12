@@ -6,13 +6,13 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:13:36 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/29 17:18:51 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/12 14:27:17 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void	check_duplicates(int argc, char **argv)
+static void	check_duplicates(int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -31,7 +31,7 @@ void	check_duplicates(int argc, char **argv)
 	}
 }
 
-void	check_not_number(int argc, char **argv)
+static void	check_not_number(int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -42,9 +42,9 @@ void	check_not_number(int argc, char **argv)
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
-			if (argv[i][j] == '-' || argv[i][j] == '+')
+			if (argv[i][j] == '-' && j == 0)
 				j++;
-			if (argv[i][j] < '0' || argv[i][j] > '9')
+			if (ft_isdigit(argv[i][j]) == 0)
 				exit((write(2, "Error\n", 6), EXIT_FAILURE));
 			j++;
 		}
@@ -52,7 +52,7 @@ void	check_not_number(int argc, char **argv)
 	}
 }
 
-void	check_outrange_int(int argc, char **argv)
+static void	check_outrange_int(int argc, char **argv)
 {
 	int	i;
 
@@ -65,7 +65,7 @@ void	check_outrange_int(int argc, char **argv)
 	}
 }
 
-void	check_args(int argc, char **argv)
+static void	check_args(int argc, char **argv)
 {
 	if (argc < 2 && argv[1] == NULL)
 		exit(EXIT_FAILURE);

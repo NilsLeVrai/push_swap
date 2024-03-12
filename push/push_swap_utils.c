@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 18:33:45 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/12 14:31:05 by niabraha         ###   ########.fr       */
+/*   Created: 2024/03/12 14:41:57 by niabraha          #+#    #+#             */
+/*   Updated: 2024/03/12 14:43:11 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int argc, char **argv)
+#include "../includes/push_swap_header.h"
+
+int lst_size(struct s_index *head)
 {
-	argc++;
-	argv--;
-	return (0);
+	int				len;
+	struct s_index	*temp;
+
+	len = 0;
+	temp = head;
+	while (temp != NULL)
+	{
+		len++;
+		temp = temp->next;
+	}
+	return (len);
 }
