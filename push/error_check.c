@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:13:36 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/12 14:27:17 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/12 18:02:23 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static void	check_outrange_int(int argc, char **argv)
 static void	check_args(int argc, char **argv)
 {
 	if (argc < 2 && argv[1] == NULL)
-		exit(EXIT_FAILURE);
+		exit(EXIT_SUCCESS);
 	return ;
 }
 
