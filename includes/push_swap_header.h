@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/12 14:43:44 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:06:17 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ typedef struct s_index
 void			print_index(struct s_index *head);
 struct s_index	*create_list(int argc, char **argv);
 void			error_check(int argc, char **argv);
-int lst_size(struct s_index *head);
-void sort_index(struct s_index *head);
+int 			lst_size(struct s_index *head);
+void 			sort_index(struct s_index *head);
 
 
 void			pa(t_index **a_stack, t_index **b_stack);

@@ -6,18 +6,32 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/12 14:50:52 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:22:18 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void sort_index(struct s_index *head)
+/* void sort_index(struct s_index *head)
 {
-	int	len;
+	struct s_index *tmp;
+	struct s_index *super_tmp;
 
-	len = lst_size(head);
-}
+	tmp = head;
+	super_tmp = tmp;
+	while (tmp->next != NULL)
+	{
+		if (tmp->index > tmp->next->index)
+		{
+			super_tmp = tmp->index;
+			tmp->index = tmp->next->index;
+			tmp->next->index = super_tmp;
+			tmp = head;
+		}
+		else
+			tmp = tmp->next;
+	}
+} */
 
 struct s_index	*create_list(int argc, char **argv)
 {
@@ -42,9 +56,9 @@ struct s_index	*create_list(int argc, char **argv)
 		temp->next->prev = temp;
 		temp = temp->next;
 		temp->value = ft_atoi(argv[i]);
+		temp->index = i;
 		temp->next = NULL;
 	}
-	sort_index(head);
 	return (head);
 }
 
@@ -53,9 +67,10 @@ void	print_index(struct s_index *head)
 	struct s_index	*temp;
 
 	temp = head;
+	//sort_index(temp);
 	while (temp != NULL)
 	{
-		printf("value: %d\n", temp->value);
+		printf("value: %d \n", temp->value /*,temp->index*/);
 		temp = temp->next;
 	}
 }
