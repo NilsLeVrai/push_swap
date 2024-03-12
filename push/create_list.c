@@ -6,20 +6,23 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/12 13:14:13 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/12 13:56:11 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-/* struct t_index	*create_list(int argc, char **argv)
+// poly s_index
+// t_mono t_index
+
+struct s_index	*create_list(int argc, char **argv)
 {
-	struct t_index	*head;
-	struct t_index	*temp;
+	struct s_index	*head;
+	struct s_index	*temp;
 	int			i;
 
 	i = 1;
-	head = (struct t_index *)malloc(sizeof(struct t_index));
+	head = (struct s_index *)malloc(sizeof(struct s_index));
 	if (!head)
 		return (NULL);
 	head->prev = NULL;
@@ -30,7 +33,7 @@
 	i++;
 	while (i < argc)
 	{
-		temp->next = (struct t_index *)malloc(sizeof(struct t_index));
+		temp->next = (struct s_index *)malloc(sizeof(struct s_index));
 		if (temp->next == NULL)
 			return (NULL);
 		temp->next->prev = temp;
@@ -43,9 +46,9 @@
 	return (head);
 }
 
-void	print_index(struct t_index *head)
+void	print_index(struct s_index *head)
 {
-	struct t_index	*temp;
+	struct s_index	*temp;
 
 	temp = head;
 	while (temp != NULL)
@@ -54,4 +57,4 @@ void	print_index(struct t_index *head)
 		printf("index: %d\n", temp->index);
 		temp = temp->next;
 	}
-} */
+}

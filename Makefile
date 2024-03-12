@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 14:25:31 by niabraha          #+#    #+#              #
-#    Updated: 2024/03/07 14:04:01 by niabraha         ###   ########.fr        #
+#    Updated: 2024/03/12 13:52:17 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ NAME_P = push_swap
 _SRCS_C = main.c
 
 _SRCS_P = push_swap.c \
-			push_swap_utils.c \
 			create_list.c \
 			error_check.c \
 			pa.c \
