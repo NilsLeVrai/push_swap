@@ -12,7 +12,6 @@
 
 int	main(int argc, char **argv)
 {
-	argc--;
-	argv++;
+	if (argc < 6 && argv[0])
 	return (0);
 }

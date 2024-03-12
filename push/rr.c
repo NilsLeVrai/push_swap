@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:49:31 by niabraha          #+#    #+#             */
-/*   Updated: 2024/02/22 11:02:15 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/09 21:00:51 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void	rr(t_mono **a_stack, t_mono **b_stack)
+void	rr(t_val_index **a_stack, t_val_index **b_stack)
 {
 	ra(a_stack);
 	rb(b_stack);
