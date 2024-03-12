@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:43:32 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/09 21:00:51 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/12 13:03:51 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void	ss(t_val_index **a_stack, t_val_index **b_stack)
+void	ss(t_index **a_stack, t_index **b_stack)
 {
 	sa(a_stack);
 	sb(b_stack);

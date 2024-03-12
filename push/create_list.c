@@ -6,21 +6,21 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/12 12:38:47 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/12 13:14:13 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-struct poly	*create_list(int argc, char **argv)
+/* struct t_index	*create_list(int argc, char **argv)
 {
-	struct poly	*head;
-	struct poly	*temp;
+	struct t_index	*head;
+	struct t_index	*temp;
 	int			i;
 
 	i = 1;
-	head = (struct poly *)malloc(sizeof(struct poly));
-	if (head == NULL)
+	head = (struct t_index *)malloc(sizeof(struct t_index));
+	if (!head)
 		return (NULL);
 	head->prev = NULL;
 	head->value = ft_atoi(argv[i]);
@@ -30,7 +30,7 @@ struct poly	*create_list(int argc, char **argv)
 	i++;
 	while (i < argc)
 	{
-		temp->next = (struct poly *)malloc(sizeof(struct poly));
+		temp->next = (struct t_index *)malloc(sizeof(struct t_index));
 		if (temp->next == NULL)
 			return (NULL);
 		temp->next->prev = temp;
@@ -43,17 +43,15 @@ struct poly	*create_list(int argc, char **argv)
 	return (head);
 }
 
-void	print_list(struct poly *head)
+void	print_index(struct t_index *head)
 {
-	struct poly	*temp;
+	struct t_index	*temp;
 
 	temp = head;
 	while (temp != NULL)
 	{
 		printf("value: %d ", temp->value);
-		printf("\n");
 		printf("index: %d\n", temp->index);
-		printf("\n");
 		temp = temp->next;
 	}
-}
+} */

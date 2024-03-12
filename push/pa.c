@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:45:49 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/09 21:00:51 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/12 13:03:51 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-void	pa(t_val_index **a_stack, t_val_index **b_stack)
+void	pa(t_index **a_stack, t_index **b_stack)
 {
-	t_val_index	*temp;
+	t_index	*temp;
 
 	if (*b_stack == NULL)
 		return ;
