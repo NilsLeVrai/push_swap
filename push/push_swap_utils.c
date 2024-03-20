@@ -6,13 +6,13 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:41:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/12 14:43:11 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:28:35 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-int lst_size(struct s_index *head)
+int	lst_size(struct s_index *head)
 {
 	int				len;
 	struct s_index	*temp;
