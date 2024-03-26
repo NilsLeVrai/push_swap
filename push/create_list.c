@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/26 18:34:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/26 18:38:15 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,3 +106,4 @@ struct s_index	*create_list(int argc, char **argv)
 	}
 	return (head);
 }
+
