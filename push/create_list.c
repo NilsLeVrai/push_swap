@@ -6,86 +6,74 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/20 21:32:12 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/26 18:34:50 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
 
-struct s_index *ultima_sort(struct s_temp *head_temp, struct s_index *head_index)
+/* void find_smallest(struct s_index *head)
 {
-	t_temp *t_head_temp;
-	t_index *t_head_index;
-	int stored_value;
-	int len;
-	int i;
-
-	t_head_temp = head_temp;
-	t_head_index = head_index;
-	len = lst_size(head_index);
-	i = 0;
-	while (len > i)
-	{
-		stored_value = t_head_temp->value_copy;
-		while (stored_value != t_head_index->value)
-			t_head_index = t_head_index->next;
-		t_head_index->index = i;
-		i++;
-		stored_value = t_head_temp->next_copy->value_copy;
-		t_head_index = head_index;
-		t_head_temp = head_temp;
-	}
-	return (head_index);
-}
-
-void sort_index(struct s_temp *head)
-{
-	t_temp *temp;
-	t_temp *temp2;
-	int temp_value;
+	struct s_index	*temp;
+	int 			smallest;
+	int				len;
 
 	temp = head;
-	while (temp != NULL)
+	smallest = temp->value;
+	len = lst_size(temp);
+	while (len--)
 	{
-		temp2 = temp->next_copy;
+		if (temp->value < smallest)
+			smallest = temp->value;
+		temp = temp->next;
+	}
+	printf("smallest: %d\n", smallest);
+}
+*/
+void sort_index(struct s_index *head)
+{
+	struct s_index	*temp;
+	struct s_index	*temp2;
+	int				swap;
+
+	temp = head;
+	while (temp->next != NULL)
+	{
+		temp2 = temp->next;
 		while (temp2 != NULL)
 		{
-			if (temp->value_copy > temp2->value_copy)
+			if (temp->value > temp2->value)
 			{
-				temp_value = temp->value_copy;
-				temp->value_copy = temp2->value_copy;
-				temp2->value_copy = temp_value;
+				swap = temp->value;
+				temp->value = temp2->value;
+				temp2->value = swap;
+				swap = temp->index;
+				temp->index = temp2->index;
+				temp2->index = swap;
 			}
-			temp2 = temp2->next_copy;
+			temp2 = temp2->next;
 		}
-		temp = temp->next_copy;
+		temp = temp->next;
 	}
-}
+} 
 
-struct s_temp *copy_values(t_index *head)
+//la pour tester
+
+void	print_index(struct s_index *head)
 {
-	t_temp *new_head = NULL;
-    t_temp *new_tail = NULL;
+	struct s_index	*temp;
 
-    while (head != NULL)
-    {
-        t_temp *new_node = malloc(sizeof(t_temp));
-        new_node->value_copy = head->value;
-        new_node->index_copy = head->index;
-        new_node->next_copy = NULL;
-        if (new_head == NULL)
-        {
-            new_head = new_node;
-            new_tail = new_node;
-        }
-        else
-        {
-            new_tail->next_copy = new_node;
-            new_tail = new_node;
-        }
-        head = head->next;
-    }
-    return new_head;
+	temp = head;
+	//sort_index(temp);
+	printf("\nt_head_index: \n\n");
+	while (temp != NULL)
+	{
+		printf("value: %d \n", temp->value);
+		printf("value_temp: %d \n", temp->value_temp);
+		printf("index: %d \n", temp->index);
+		printf("index_temp: %d \n", temp->index_temp);
+		temp = temp->next;
+	}
 }
 
 struct s_index	*create_list(int argc, char **argv)
@@ -99,7 +87,9 @@ struct s_index	*create_list(int argc, char **argv)
 	if (!head)
 		return (NULL);
 	head->value = ft_atoi(argv[i]);
+	head->value_temp = ft_atoi(argv[i]);
 	head->index = i;
+	head->index_temp = i;
 	head->next = NULL;
 	temp = head;
 	while (argc > ++i)
@@ -108,39 +98,11 @@ struct s_index	*create_list(int argc, char **argv)
 		if (temp->next == NULL)
 			return (NULL);
 		temp = temp->next;
-		temp->index = i;
 		temp->value = ft_atoi(argv[i]);
+		temp->value_temp = ft_atoi(argv[i]);
+		temp->index = i;
+		temp->index_temp = i;
 		temp->next = NULL;
 	}
 	return (head);
 }
-
-
-//la pour tester
-
-void	print_index(struct s_index *head)
-{
-	struct s_index	*temp;
-	struct s_temp	*temp_copy;
-	
-
-	temp = head;
-	temp_copy = copy_values(head);
-	sort_index(temp_copy);
-	temp = ultima_sort(temp_copy, temp);
-	printf("\nt_index: \n");
-	while (temp != NULL)
-	{
-		printf("value: %d \n", temp->value);
-		printf("index: %d \n", temp->index);
-		temp = temp->next;
-	}
-	printf("\nt_temp: \n");
-	while (temp_copy != NULL)
-	{
-		printf("value: %d \n", temp_copy->value_copy);
-		printf("index: %d \n", temp_copy->index_copy);
-		temp_copy = temp_copy->next_copy;
-	}
-}
-

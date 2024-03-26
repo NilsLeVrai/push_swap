@@ -6,11 +6,25 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:13:36 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/13 13:47:02 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/26 18:23:41 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_header.h"
+
+void is_sorted(struct s_index *head)
+{
+	t_index	*temp;
+
+	temp = head;
+	while (temp->next != NULL)
+	{
+		if (temp->value > temp->next->value)
+			return ;
+		temp = temp->next;
+	}
+	exit(EXIT_SUCCESS);
+}
 
 static void	check_duplicates(int argc, char **argv)
 {
