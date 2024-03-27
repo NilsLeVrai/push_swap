@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 00:04:23 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/28 00:27:11 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void sort_value_temp(struct s_index *head)
 	int		nb;
 	t_index	*temp;
 	t_index	*temp_2;
+	int	i;
 
+	i = 0;
 	temp = head;
 	while (temp->next != NULL)
 	{
@@ -43,6 +45,20 @@ void sort_value_temp(struct s_index *head)
 		temp = temp->next;
 	}
 	temp = head;
+	while (temp)
+	{
+		nb = lst_size(head);
+		while (i < nb)
+		{
+			while(i != temp->index && temp)
+			{
+				temp = temp->next;
+			}
+			i++;
+			temp = head;
+		}
+		temp->index = i;
+	}
 	/* while (temp->index_temp)
 	{
 		//if (temp->index)
@@ -86,7 +102,8 @@ void	print_index(struct s_index *head)
 		//printf("value_temp:%d \n", temp->value_temp);
 		yellow();
 		printf("index: %d \n", temp->index);
-		//printf("index_temp: %d \n", temp->index_temp);
+		red();
+		printf("index_temp: %d \n", temp->index_temp);
 		temp = temp->next;
 	}
 }
