@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/26 18:08:24 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/27 21:03:08 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ typedef struct s_index
 	int				value;
 	int				value_temp;
 	int				index;
-	int				index_temp;
+	int 			index_temp;
 	struct s_index	*next;
+	struct s_index	*previous;
+	
 }	t_index;
 
 
@@ -34,7 +36,8 @@ void			print_index(struct s_index *head);
 struct s_index	*create_list(int argc, char **argv);
 void			error_check(int argc, char **argv);
 int				lst_size(struct s_index *head);
-void			sort_index(struct s_index *head);
+void			sort_value_temp(struct s_index *head);
+void			sort_again(t_index *head);
 void 			ultima_sort(struct s_index *head_temp, struct s_index *head_index);
 void 			is_sorted(struct s_index *head);
 
