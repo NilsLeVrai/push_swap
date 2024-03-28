@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 01:48:39 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:01:51 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ void sort_value_temp(struct s_index *head)
 	int		nb;
 	t_index	*temp;
 	t_index	*temp_2;
-	//int	i;
 
-//	i = 0;
 	temp = head;
 	while (temp->next != NULL)
 	{
@@ -37,7 +35,7 @@ void sort_value_temp(struct s_index *head)
 	while (temp)
 	{
 		temp_2 = head;
-		while (temp->value != temp_2->value_temp) // && temp_2->next ??
+		while (temp->value != temp_2->value_temp)
 			temp_2 = temp_2->next;
 		temp->index = temp_2->index_temp;
 		temp = temp->next;
@@ -78,8 +76,8 @@ void	print_index(struct s_index *head)
 		//printf("value_temp:%d \n", temp->value_temp);
 		yellow();
 		printf("index: %d \n", temp->index);
-		red();
-		printf("index_temp: %d \n", temp->index_temp);
+/* 		red();
+		printf("index_temp: %d \n", temp->index_temp); */
 		temp = temp->next;
 	}
 }
@@ -109,7 +107,6 @@ struct s_index	*create_list(int argc, char **argv)
 		temp->value = ft_atoi(argv[i]);
 		temp->value_temp = ft_atoi(argv[i]);
 		temp->index = i;
-		// new line below
 		temp->index_temp = i;
 		temp->next = NULL;
 	}
