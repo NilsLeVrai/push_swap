@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 00:27:11 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/28 01:48:39 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void sort_value_temp(struct s_index *head)
 	int		nb;
 	t_index	*temp;
 	t_index	*temp_2;
-	int	i;
+	//int	i;
 
-	i = 0;
+//	i = 0;
 	temp = head;
 	while (temp->next != NULL)
 	{
@@ -34,38 +34,14 @@ void sort_value_temp(struct s_index *head)
 			temp = temp->next;
 	}
 	temp = head;
-	while (temp->next)
-	{
-		temp_2 = head;
-		while (temp->value != temp_2->value_temp && temp_2->next)
-			temp_2 = temp_2->next;
-		//nb = temp->index;
-		temp->index = temp_2->index_temp;
-		//temp_2->index = nb;
-		temp = temp->next;
-	}
-	temp = head;
 	while (temp)
 	{
-		nb = lst_size(head);
-		while (i < nb)
-		{
-			while(i != temp->index && temp)
-			{
-				temp = temp->next;
-			}
-			i++;
-			temp = head;
-		}
-		temp->index = i;
+		temp_2 = head;
+		while (temp->value != temp_2->value_temp) // && temp_2->next ??
+			temp_2 = temp_2->next;
+		temp->index = temp_2->index_temp;
+		temp = temp->next;
 	}
-	/* while (temp->index_temp)
-	{
-		//if (temp->index)
-	} */
-	//printf("index temp : %d\n", temp->index);
-	//temp->index = 1;
-	//printf("allo : %d\n", temp_2->index_temp);
 }
 
 //la pour tester
