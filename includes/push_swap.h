@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 18:50:43 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/28 18:58:34 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ struct s_index	*create_list(int argc, char **argv);
 void			error_check(int argc, char **argv);
 int				lst_size(struct s_index *head);
 void			sort_value_temp(struct s_index *head);
-void			sort_again(t_index *head);
-void			ultima_sort(t_index *head_temp, t_index *head_index);
 
 void			pa(t_index **a_stack, t_index **b_stack);
 void			pb(t_index **a_stack, t_index **b_stack);
