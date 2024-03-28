@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 16:44:16 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 17:01:58 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/28 18:40:15 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	is_sorted(int argc, char **argv)
 	{
 		if (ft_atoi(argv[i]) > ft_atoi(argv[i + 1]))
 			return ;
-		printf("oui: %d\n", ft_atoi(argv[i]));
 		i++;
 	}
 	exit(EXIT_SUCCESS);
