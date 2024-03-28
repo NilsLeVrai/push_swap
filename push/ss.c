@@ -6,11 +6,11 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:43:32 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/12 13:03:51 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/28 16:53:50 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap_header.h"
+#include "../includes/push_swap.h"
 
 void	ss(t_index **a_stack, t_index **b_stack)
 {
