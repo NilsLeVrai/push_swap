@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_check_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 16:44:16 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 18:58:43 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/03/31 22:49:03 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	is_sorted(int argc, char **argv)
 	i = 1;
 	while (argc - 1 > i)
 	{
-		if (ft_atoi(argv[i]) > ft_atoi(argv[i + 1]))
+		if (ft_atol(argv[i]) > ft_atol(argv[i + 1]))
 			return ;
 		i++;
 	}

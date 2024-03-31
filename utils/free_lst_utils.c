@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   free_lst.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 13:19:10 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/09 17:25:34 by niabraha         ###   ########.fr       */
+/*   Created: 2024/03/30 12:37:56 by niabraha          #+#    #+#             */
+/*   Updated: 2024/03/30 15:59:16 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/push_swap.h"
 
-int	ft_isascii(int c)
+/* void free_lst(t_index *a_stack, t_index *b_stack)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
-}
+    while ()
+} */
