@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/02 00:01:40 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/02 17:43:09 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int	main(int argc, char **argv)
 	error_check(argc, argv);
 	a_stack = create_list(argc, argv);
 	b_stack = NULL;
-	pb(&a_stack, &b_stack);
-	sa(&a_stack);
-	rra(&a_stack);
-	sa(&a_stack);
-	pa(&a_stack, &b_stack);
-	rra(&a_stack);
+	while (bool_sorted(a_stack))
+	{
+		if (argc == 3)
+			sa(&a_stack);
+		sb(&b_stack);
+	}
 
 /* 	printf("a_stack:\n");
 	print_index(a_stack);

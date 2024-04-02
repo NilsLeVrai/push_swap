@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:41:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/31 23:15:31 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/02 17:39:57 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,18 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	return (res * neg);
+}
+
+int bool_sorted(t_index *head)
+{
+	t_index	*temp;
+
+	temp = head;
+	while (temp->next != NULL)
+	{
+		if (temp->value > temp->next->value)
+			return (1);
+		temp = temp->next;
+	}
+	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/31 23:41:10 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/02 15:45:37 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <limits.h>
+
+# define TRUE 1
+# define FALSE 0
 
 typedef struct s_index
 {
@@ -89,6 +92,7 @@ void	print_index(struct s_index *head);
 ////   \__,_|\__|_|_|___/  ////
 ///////////////////////////////
 
+int 	bool_sorted(t_index *head);
 int		ft_atoi(const char *nptr);
 int		ft_isdigit(int c);
 int		lst_size(struct s_index *head);
