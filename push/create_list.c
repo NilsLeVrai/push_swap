@@ -3,14 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   create_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/02 16:00:01 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:13:32 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+static void set_quartile(t_index *head)
+{
+	t_index	*temp;
+	int	stack_len;
+	int	div;
+
+	temp = head;
+	stack_len = lst_size(head);
+	div = stack_len / 4;
+	while (temp->next != NULL)
+	{
+		if (temp->value <= div)
+			temp->quartile = 1;
+		else if (temp->value <= 2 * div)
+			temp->quartile = 2;
+		else if (temp->value <= 3 * div)
+			temp->quartile = 3;
+		else
+			temp->quartile = 4;
+		temp = temp->next;
+	}
+}
 
 static void	swap(int *a, int *b)
 {
@@ -58,9 +81,7 @@ void	print_index(struct s_index *head)
 	while (temp != NULL)
 	{
 		printf("value:%d \n", temp->value);
-		//printf("value_temp:%d\n", temp->value_temp);
 		printf("index: %d \n", temp->target_pos);
-		//printf("initial pos: %d \n", temp->initial_pos);
 		temp = temp->next;
 	}
 }
@@ -96,5 +117,6 @@ struct s_index	*create_list(int argc, char **argv)
 		temp->initial_pos = i;
 		temp->next = NULL;
 	}
+	set_quartile(head);
 	return (head);
 }
