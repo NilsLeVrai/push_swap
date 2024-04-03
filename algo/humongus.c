@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/03 16:22:19 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:51:09 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,45 +19,45 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 
 	temp_a = *a_stack;
 	temp_b = *b_stack;
-	while (temp_a->next != NULL)
+	if (temp_a->quartile == 1)
 	{
+		pb(a_stack, b_stack);
+		if (temp_b->quartile < temp_b->next->quartile)
+		{
+			rb(b_stack);
+		}
+	}
+	else if (temp_a->quartile == 2)
+	{
+		pb(a_stack, b_stack);
+	}
+	else if (temp_a->quartile == 3)
+	{
+		while (temp_a->next->quartile == 3 || temp_a->next->quartile == 4)
+		{
+			ra(a_stack);
+			temp_a = temp_a->next;
+		}
 		if (temp_a->quartile == 1)
 		{
 			pb(a_stack, b_stack);
-			printf("pb\n");
 			if (temp_b->quartile < temp_b->next->quartile)
-			{
 				rb(b_stack);
-				printf("pbpb\n");
-			}
 		}
-		printf("temp_a->quartile = %d\n", temp_a->quartile);
 		else if (temp_a->quartile == 2)
 		{
 			pb(a_stack, b_stack);
 		}
-		else if (temp_a->quartile == 3)
+		else
 		{
-			while (temp_a->next->quartile == 3 || temp_a->next->quartile == 4)
-			{
-				ra(a_stack);
-				temp_a = temp_a->next;
-			}
-			if (temp_a->quartile == 1)
-			{
-				pb(a_stack, b_stack);
-				if (temp_b->quartile < temp_b->next->quartile)
-					rb(b_stack);
-			}
-			else if (temp_a->quartile == 2)
-			{
-				pb(a_stack, b_stack);
-			}
-			else
-				ra(a_stack);
 			temp_a = temp_a->next;
+			
 		}
+			
 	}
+	else
+		ra(a_stack);
+	temp_a = temp_a->next;
 }
 
 

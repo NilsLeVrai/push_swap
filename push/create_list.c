@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/03 16:13:32 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:31:39 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,7 @@ void	print_index(struct s_index *head)
 	printf("\n\nt_head_index: \n\n");
 	while (temp != NULL)
 	{
-		printf("value:%d \n", temp->value);
-		printf("index: %d \n", temp->target_pos);
+		printf("quartile:%d \n", temp->quartile);
 		temp = temp->next;
 	}
 }
