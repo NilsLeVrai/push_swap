@@ -1,0 +1,58 @@
+void humongus_sort(t_index **a_stack, t_index **b_stack)
+{
+	t_index	*temp_a;
+	t_index	*temp_b;
+	int		len_stack;
+
+	temp_a = *a_stack;
+	temp_b = *b_stack;
+	len_stack = lst_size(*a_stack);
+	while (len_stack > len_stack/2)
+	{
+		if (temp_a->quartile == 1)
+		{
+			pb(a_stack, b_stack);
+			len_stack--;
+			printf("4\n");
+			if (temp_b->quartile < temp_b->next->quartile)
+			{
+				printf("1\n");
+				rb(b_stack);
+			}
+		}
+		printf("5\n");
+		else if (temp_a->quartile == 2)
+		{
+			len_stack--;
+			pb(a_stack, b_stack);
+			printf("2\n");
+		}
+		else if (temp_a->quartile == 3)
+		{
+			while (temp_a->next->quartile == 3 || temp_a->next->quartile == 4)
+			{
+				ra(a_stack);
+				temp_a = temp_a->next;
+			}
+			if (temp_a->quartile == 1)
+			{
+				pb(a_stack, b_stack);
+				if (temp_b->quartile < temp_b->next->quartile)
+					rb(b_stack);
+			}
+			else if (temp_a->quartile == 2)
+			{
+				pb(a_stack, b_stack);
+			}
+			else
+			{
+				temp_a = temp_a->next;
+			}
+			
+		}
+		else
+			ra(a_stack);
+		printf("3\n");
+		temp_a = temp_a->next;
+	}
+}

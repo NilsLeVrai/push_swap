@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/03 16:31:39 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/04 17:22:34 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void set_quartile(t_index *head)
 	temp = head;
 	stack_len = lst_size(head);
 	div = stack_len / 4;
-	while (temp->next != NULL)
+	while (temp)
 	{
 		if (temp->value <= div)
 			temp->quartile = 1;
@@ -37,11 +37,11 @@ static void set_quartile(t_index *head)
 
 static void	swap(int *a, int *b)
 {
-	int	nb;
+	int	tmp;
 
-	nb = *a;
+	tmp = *a;
 	*a = *b;
-	*b = nb;
+	*b = tmp;
 }
 
 void	sort_value_temp(struct s_index *head)
@@ -80,7 +80,8 @@ void	print_index(struct s_index *head)
 	printf("\n\nt_head_index: \n\n");
 	while (temp != NULL)
 	{
-		printf("quartile:%d \n", temp->quartile);
+		printf("value: %d\n", temp->value);
+		printf("quartile: %d\n", temp->quartile);
 		temp = temp->next;
 	}
 }

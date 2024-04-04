@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   humongus.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/03 16:51:09 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/04 18:13:15 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,47 +19,25 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 
 	temp_a = *a_stack;
 	temp_b = *b_stack;
-	if (temp_a->quartile == 1)
+	temp_b = temp_b;
+	int len = lst_size(temp_a);
+	printf("len = %d\n", len);
+	while (len/2 < len)
 	{
-		pb(a_stack, b_stack);
-		if (temp_b->quartile < temp_b->next->quartile)
-		{
-			rb(b_stack);
-		}
-	}
-	else if (temp_a->quartile == 2)
-	{
-		pb(a_stack, b_stack);
-	}
-	else if (temp_a->quartile == 3)
-	{
-		while (temp_a->next->quartile == 3 || temp_a->next->quartile == 4)
-		{
-			ra(a_stack);
-			temp_a = temp_a->next;
-		}
 		if (temp_a->quartile == 1)
 		{
 			pb(a_stack, b_stack);
-			if (temp_b->quartile < temp_b->next->quartile)
-				rb(b_stack);
 		}
 		else if (temp_a->quartile == 2)
 		{
 			pb(a_stack, b_stack);
 		}
 		else
-		{
-			temp_a = temp_a->next;
-			
-		}
-			
+			ra(a_stack);
+		temp_a = *a_stack;
+		len--;
 	}
-	else
-		ra(a_stack);
-	temp_a = temp_a->next;
 }
-
 
 /*
 faire des groupes de 4
