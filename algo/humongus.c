@@ -3,14 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   humongus.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/04 18:43:58 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/04 22:49:02 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+static int lst_max(t_index *lst)
+{
+	int max = lst->value;
+	while (lst)
+	{
+		if (lst->value > max)
+			max = lst->value;
+		lst = lst->next;
+	}
+	return (max);
+}
 
 void humongus_sort(t_index **a_stack, t_index **b_stack)
 {
@@ -19,9 +31,7 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 
 	temp_a = *a_stack;
 	temp_b = *b_stack;
-	temp_b = temp_b;
 	int len = lst_size(temp_a);
-	printf("len = %d\n", len/3);
 	while (len/2 < len)
 	{
 		if (temp_a->quartile == 1)
@@ -29,20 +39,44 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 			pb(a_stack, b_stack);
 			temp_b = *b_stack;
 			temp_b->quartile = 1;
-			len--;
+			if (temp_b->next)
+			{
+				if (temp_b->next->quartile == 2)
+					rb(b_stack);
+			}
 		}
 		else if (temp_a->quartile == 2)
 		{
 			pb(a_stack, b_stack);
 			temp_b = *b_stack;
 			temp_b->quartile = 2;
-			len--;
 		}
-		else
+		else if (temp_a->quartile == 3)
+			ra(a_stack);
+		else 
 			ra(a_stack);
 		temp_a = *a_stack;
-		//len--;
+		len--;
 	}
+	temp_b = *b_stack;
+
+	
+	//testing
+	//len = lst_size(temp_b);
+	int i = 0;
+	int cost = 0;
+	int max = lst_max(temp_b);
+	printf("max = %d\n", max);
+	while (i < len/4)
+	{
+		while (temp_b->value != max)
+		{
+			temp_b = temp_b->next;
+			cost++;
+		}
+		if (cost)
+	}
+	printf("cost = %d\n", cost);
 }
 
 /*
