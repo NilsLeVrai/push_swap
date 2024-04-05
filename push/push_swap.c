@@ -21,6 +21,7 @@ int	main(int argc, char **argv)
 	a_stack = create_list(argc, argv);
 	b_stack = NULL;
 	//print_index(a_stack);
+	//print_index(b_stack);
 	humongus_sort(&a_stack, &b_stack);
 
 /* 	printf("a_stack:\n");

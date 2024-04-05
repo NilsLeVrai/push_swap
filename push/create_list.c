@@ -1,14 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   create_list.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 18:50:08 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/04 20:45:22 by niabraha         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "../includes/push_swap.h"
 
@@ -17,7 +7,6 @@ static void set_quartile(t_index *head)
 	t_index	*temp;
 	int	stack_len;
 	int	div;
-
 	temp = head;
 	stack_len = lst_size(head);
 	div = stack_len / 4;
@@ -37,11 +26,11 @@ static void set_quartile(t_index *head)
 
 static void	swap(int *a, int *b)
 {
-	int	tmp;
+	int	nb;
 
-	tmp = *a;
+	nb = *a;
 	*a = *b;
-	*b = tmp;
+	*b = nb;
 }
 
 void	sort_value_temp(struct s_index *head)
@@ -66,7 +55,7 @@ void	sort_value_temp(struct s_index *head)
 		temp_2 = head;
 		while (temp->value != temp_2->value_temp)
 			temp_2 = temp_2->next;
-		temp->target_pos = temp_2->initial_pos;
+		temp->index = temp_2->index_temp;
 		temp = temp->next;
 	}
 }
@@ -80,8 +69,9 @@ void	print_index(struct s_index *head)
 	printf("\n\nt_head_index: \n\n");
 	while (temp != NULL)
 	{
-		printf("value: %d\n", temp->value);
-		printf("quartile: %d\n", temp->quartile);
+		//printf("value:%d \n", temp->value);
+		printf("index: %d \n", temp->index);
+		//printf("quartile: %d \n", temp->quartile);
 		temp = temp->next;
 	}
 }
@@ -103,8 +93,8 @@ struct s_index	*create_list(int argc, char **argv)
 	check_alloc(head = malloc(sizeof(struct s_index)));
 	head->value = ft_atoi(argv[i]);
 	head->value_temp = ft_atoi(argv[i]);
-	head->target_pos = i;
-	head->initial_pos = i;
+	head->index = i;
+	head->index_temp = i;
 	head->next = NULL;
 	temp = head;
 	while (argc > ++i)
@@ -113,8 +103,8 @@ struct s_index	*create_list(int argc, char **argv)
 		temp = temp->next;
 		temp->value = ft_atoi(argv[i]);
 		temp->value_temp = ft_atoi(argv[i]);
-		temp->target_pos = i;
-		temp->initial_pos = i;
+		temp->index = i;
+		temp->index_temp = i;
 		temp->next = NULL;
 	}
 	set_quartile(head);

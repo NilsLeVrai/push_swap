@@ -23,12 +23,15 @@ typedef struct s_index
 {
 	int				value;
 	int				value_temp;
-	int				target_pos;
-	int				initial_pos;
+	int				index;
 	int				quartile;
+	int index_temp;
+	int initial_pos;
 	struct s_index	*next;
 	struct s_index	*previous;
 }					t_index;
+
+
 
 void humongus_sort(t_index **a_stack, t_index **b_stack);
 
