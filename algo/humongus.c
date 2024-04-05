@@ -61,4 +61,9 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 		len_b--;
 	}
 	temp_b = *b_stack;
+
+////////////////////////
+	// 4 groupes fait
+	//////////////////
+
 }
