@@ -70,8 +70,8 @@ void	print_index(struct s_index *head)
 	printf("\n\nt_head_index: \n\n");
 	while (temp)
 	{
-		printf("value:%d \n", temp->value);
-		//printf("index: %d \n", temp->index);
+		//printf("value:%d \n", temp->value);
+		printf("index: %d \n", temp->index);
 		printf("group: %d \n", temp->group);
 		temp = temp->next;
 	}

@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/16 18:44:54 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/16 19:46:40 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,27 +19,32 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 
 	temp_a = *a_stack;
 	temp_b = *b_stack;
-	while (temp_a)
+	int len = lst_size(temp_a);
+	printf("len = %d\n", len);
+	if (temp_b)
+	{
+		write(1, "blabla\n", 7);
+	}
+	while (len > 0)
 	{
 		if (temp_a->group == 1)
+		{
 			pb(a_stack, b_stack);
-		else if (temp_a->group == 2)
-			ra(a_stack);
-		else if (temp_a->group == 3)
-			rra(a_stack);
+			rb(b_stack);
+		}
 		else if (temp_a->group == 4)
 		{
 			pb(a_stack, b_stack);
-			ra(a_stack);
+		}
+		else if (temp_a->group == 3 || temp_a->group == 2)
+		{
+			
 		}
 		else
 		{
-			pb(a_stack, b_stack);
-			rra(a_stack);
-		}
-		else
 			ra(a_stack);
+		}
 		temp_a = *a_stack;
-		temp_a = temp_a->next;
+		len--;
 	}
 }

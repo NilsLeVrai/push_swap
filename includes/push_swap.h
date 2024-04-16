@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/16 17:43:27 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/16 19:11:56 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ typedef struct s_index
 	int				value_temp;
 	int				index;
 	int				group;
-	int index_temp;
-	int initial_pos;
+	int				index_temp;
 	struct s_index	*next;
 	struct s_index	*previous;
 }					t_index;
