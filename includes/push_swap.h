@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/04 17:12:58 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:43:27 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_index
 	int				value;
 	int				value_temp;
 	int				index;
-	int				quartile;
+	int				group;
 	int index_temp;
 	int initial_pos;
 	struct s_index	*next;

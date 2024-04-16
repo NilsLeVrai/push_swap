@@ -2,24 +2,26 @@
 
 #include "../includes/push_swap.h"
 
-static void set_quartile(t_index *head)
+static void set_group(t_index *head)
 {
 	t_index	*temp;
 	int	stack_len;
 	int	div;
 	temp = head;
 	stack_len = lst_size(head);
-	div = stack_len / 4;
+	div = stack_len / 5;
 	while (temp)
 	{
-		if (temp->value <= div)
-			temp->quartile = 1;
-		else if (temp->value <= 2 * div)
-			temp->quartile = 2;
-		else if (temp->value <= 3 * div)
-			temp->quartile = 3;
+		if (temp->index <= div)
+			temp->group = 1;
+		else if (temp->index <= 2 * div)
+			temp->group = 2;
+		else if (temp->index <= 3 * div)
+			temp->group = 3;
+		else if (temp->index <= 4 * div)
+			temp->group = 4;
 		else
-			temp->quartile = 4;
+			temp->group = 5;
 		temp = temp->next;
 	}
 }
@@ -65,13 +67,12 @@ void	print_index(struct s_index *head)
 	struct s_index	*temp;
 
 	temp = head;
-	sort_value_temp(temp);
 	printf("\n\nt_head_index: \n\n");
-	while (temp != NULL)
+	while (temp)
 	{
-		//printf("value:%d \n", temp->value);
-		printf("index: %d \n", temp->index);
-		//printf("quartile: %d \n", temp->quartile);
+		printf("value:%d \n", temp->value);
+		//printf("index: %d \n", temp->index);
+		printf("group: %d \n", temp->group);
 		temp = temp->next;
 	}
 }
@@ -107,6 +108,7 @@ struct s_index	*create_list(int argc, char **argv)
 		temp->index_temp = i;
 		temp->next = NULL;
 	}
-	set_quartile(head);
+	sort_value_temp(head);
+	set_group(head);
 	return (head);
 }
