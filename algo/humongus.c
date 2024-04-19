@@ -6,21 +6,43 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/19 16:46:40 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:22:39 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-/* static int find_last(t_index *stack)
+static int find_max(t_index *head)
 {
-	t_index *temp;
+	t_index	*temp;
+	int		max;
 
-	temp = stack;
-	while (temp->next)
+	temp = head;
+	max = temp->index;
+	while (temp)
+	{
+		if (temp->index > max)
+			max = temp->index;
 		temp = temp->next;
-	return (temp->group);
-} */
+	}
+	return (max);
+}
+
+static int find_min(t_index *head)
+{
+	t_index	*temp;
+	int		min;
+
+	temp = head;
+	min = temp->index;
+	while (temp)
+	{
+		if (temp->index < min)
+			min = temp->index;
+		temp = temp->next;
+	}
+	return (min);
+}
 
 void humongus_sort(t_index **a_stack, t_index **b_stack)
 {
@@ -32,7 +54,6 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 	int len_a = lst_size(temp_a);
 	if (temp_b)
 		write(1, "b_stack is not empty\n", 22);
-	printf("len = %d\n", len_a);
 	while (len_a-- > 0)
 	{
 		if (temp_a->group == 1)
@@ -79,4 +100,29 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 		temp_a = *a_stack;
 		temp_b = *b_stack;
 	}
+	///////////////////////////
+	int max = find_max(*b_stack);
+	int min = find_min(*b_stack);
+	while (temp_b)
+	{
+		if (temp_b->index > max)
+			max = temp_b->index;
+		temp_b = temp_b->next;
+	}
+	temp_b = *b_stack;
+	while (temp_b)
+	{
+		if (temp_b->index < min)
+			min = temp_b->index;
+		temp_b = temp_b->next;
+	}
+	///////////////////////////
+	///////////////////////////
+	///////////////////////////
+	///////////////////////////
+	///////////////////////////
+	///////////////////////////
+
+		
+	
 }
