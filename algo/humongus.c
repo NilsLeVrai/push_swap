@@ -6,43 +6,11 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/19 17:22:39 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:49:09 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-static int find_max(t_index *head)
-{
-	t_index	*temp;
-	int		max;
-
-	temp = head;
-	max = temp->index;
-	while (temp)
-	{
-		if (temp->index > max)
-			max = temp->index;
-		temp = temp->next;
-	}
-	return (max);
-}
-
-static int find_min(t_index *head)
-{
-	t_index	*temp;
-	int		min;
-
-	temp = head;
-	min = temp->index;
-	while (temp)
-	{
-		if (temp->index < min)
-			min = temp->index;
-		temp = temp->next;
-	}
-	return (min);
-}
 
 void humongus_sort(t_index **a_stack, t_index **b_stack)
 {
@@ -101,21 +69,6 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 		temp_b = *b_stack;
 	}
 	///////////////////////////
-	int max = find_max(*b_stack);
-	int min = find_min(*b_stack);
-	while (temp_b)
-	{
-		if (temp_b->index > max)
-			max = temp_b->index;
-		temp_b = temp_b->next;
-	}
-	temp_b = *b_stack;
-	while (temp_b)
-	{
-		if (temp_b->index < min)
-			min = temp_b->index;
-		temp_b = temp_b->next;
-	}
 	///////////////////////////
 	///////////////////////////
 	///////////////////////////
@@ -123,6 +76,16 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 	///////////////////////////
 	///////////////////////////
 
-		
+	group_5(a_stack, b_stack);
+
+	
+/* 	while (temp_a)
+	{
+		if (temp_a->index != min)
+			break;
+		temp_a = temp_a->next;
+		cost_min++;
+	}
+	printf("cost_min: %d\n", cost_min); */
 	
 }

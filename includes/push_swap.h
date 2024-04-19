@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/16 19:11:56 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:48:08 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_index
 }					t_index;
 
 
-
+void group_5(t_index **a_stack, t_index **b_stack);
 void humongus_sort(t_index **a_stack, t_index **b_stack);
 
 //////////////////////////////////////////
