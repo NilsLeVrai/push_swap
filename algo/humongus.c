@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/19 17:49:09 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/22 21:57:47 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,15 +77,5 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 	///////////////////////////
 
 	group_5(a_stack, b_stack);
-
-	
-/* 	while (temp_a)
-	{
-		if (temp_a->index != min)
-			break;
-		temp_a = temp_a->next;
-		cost_min++;
-	}
-	printf("cost_min: %d\n", cost_min); */
 	
 }

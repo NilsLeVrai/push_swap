@@ -9,7 +9,9 @@ static void set_group(t_index *head)
 	int	div;
 	temp = head;
 	stack_len = lst_size(head);
+	printf("stack_len: %d\n", stack_len);
 	div = stack_len / 5;
+	printf("div: %d\n", div);
 	while (temp)
 	{
 		if (temp->index <= div)
@@ -67,11 +69,10 @@ void	print_index(struct s_index *head)
 	struct s_index	*temp;
 
 	temp = head;
-	printf("\n\nt_head_index: \n\n");
 	while (temp)
 	{
 		//printf("value:%d \n", temp->value);
-		printf("index: %d \n", temp->index);
+		//printf("index: %d \n", temp->index);
 		printf("group: %d \n", temp->group);
 		temp = temp->next;
 	}
