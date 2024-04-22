@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 17:47:21 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/19 18:21:52 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/22 23:03:16 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int find_max(t_index *head)
 	return (max);
 }
     
-void group_5(t_index **a_stack, t_index **b_stack)
+void final_sort(t_index **a_stack, t_index **b_stack)
 {
     t_index *temp_a;
     t_index *temp_b;

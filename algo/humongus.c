@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/22 23:01:13 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/22 23:03:08 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,6 @@ void humongus_sort(t_index **a_stack, t_index **b_stack)
 	///////////////////////////
 	///////////////////////////
 
-	group_5(a_stack, b_stack);
+	final_sort(a_stack, b_stack);
 	
 }
