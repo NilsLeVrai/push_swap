@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/22 23:03:28 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/22 23:27:04 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_index
 
 void final_sort(t_index **a_stack, t_index **b_stack);
 void humongus_sort(t_index **a_stack, t_index **b_stack);
+void check_infinite_loop(); // A ENLEVER
 
 //////////////////////////////////////////
 ////    ___ _ __ _ __ ___  _ __ ___   ////
