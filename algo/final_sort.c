@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   humongus.c                                         :+:      :+:    :+:   */
+/*   final_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 19:22:56 by niabraha         ###   ########.fr       */
+/*   Created: 2024/04/24 19:24:14 by niabraha          #+#    #+#             */
+/*   Updated: 2024/04/24 19:28:32 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	humongus_sort(t_index **a_stack, t_index **b_stack)
+void	final_sort(t_index **a_stack, t_index **b_stack)
 {
-	sort_groups(a_stack, b_stack);
-	sort_three(a_stack);
-	final_sort(a_stack, b_stack);
+	(void)*a_stack;
+	(void)*b_stack;
+	return ;
 }

@@ -6,15 +6,17 @@
 #    By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 14:25:31 by niabraha          #+#    #+#              #
-#    Updated: 2024/04/24 18:29:00 by niabraha         ###   ########.fr        #
+#    Updated: 2024/04/24 19:22:14 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME_C = checker
 NAME_P = push_swap
 
-_SRCS_A = humongus.c \
-			group.c 
+_SRCS_A = final_sort.c \
+			humongus.c \
+			sort_groups.c \
+			sort_three.c
 
 _SRCS_C = main.c
 
