@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_lst.c                                         :+:      :+:    :+:   */
+/*   free_lst_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 12:37:56 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/30 15:59:16 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:56:02 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-/* void free_lst(t_index *a_stack, t_index *b_stack)
+void free_lst(t_index **a_stack, t_index **b_stack)
 {
-    while ()
-} */
+	(void)a_stack;
+	(void)b_stack;
+	return ;
+}

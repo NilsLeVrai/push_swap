@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 16:44:16 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 15:51:44 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:35:48 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	check_duplicates(int argc, char **argv)
 		while (j < argc)
 		{
 			if (ft_atol(argv[i]) == ft_atol(argv[j]))
-				exit((write(2, "Error dup dup\n", 15), EXIT_FAILURE));
+				exit((write(2, "Error\n", 6), EXIT_FAILURE));
 			j++;
 		}
 		i++;
@@ -59,7 +59,7 @@ void	check_not_number(int argc, char **argv)
 			if (argv[i][j] == '-' && j == 0)
 				j++;
 			if (ft_isdigit(argv[i][j]) == 0)
-				exit((write(2, "Error pas nombre\n", 18), EXIT_FAILURE));
+				exit((write(2, "Error\n", 6), EXIT_FAILURE));
 			j++;
 		}
 		i++;
@@ -74,7 +74,7 @@ void	check_outrange_int(int argc, char **argv)
 	while (i < argc)
 	{
 		if (ft_atol(argv[i]) > 2147483647 || ft_atol(argv[i]) < -2147483648)
-			exit((write(2, "Error outrange\n", 16), EXIT_FAILURE));
+			exit((write(2, "Error\n", 6), EXIT_FAILURE));
 		i++;
 	}
 }

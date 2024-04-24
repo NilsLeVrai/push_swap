@@ -6,18 +6,17 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 18:30:43 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/24 19:06:31 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
 # include <limits.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_index
 {
@@ -27,7 +26,6 @@ typedef struct s_index
 	int				group;
 	int				index_temp;
 	struct s_index	*next;
-	struct s_index	*previous;
 }					t_index;
 
 //////////////////////////
@@ -39,9 +37,8 @@ typedef struct s_index
 //         |___/        //
 //////////////////////////
 
-void final_sort(t_index **a_stack, t_index **b_stack);
-void humongus_sort(t_index **a_stack, t_index **b_stack);
-void check_infinite_loop(); // A ENLEVER
+void	humongus_sort(t_index **a_stack, t_index **b_stack);
+void	second_sort(t_index **a_stack, t_index **b_stack);
 
 //////////////////////////////////////////
 ////    ___ _ __ _ __ ___  _ __ ___   ////
@@ -103,14 +100,14 @@ void	print_index(struct s_index *head);
 ////   \__,_|\__|_|_|___/  ////
 ///////////////////////////////
 
-int 	bool_sorted(t_index *head);
-int 	find_last(t_index **a_stack);
-int 	find_max(t_index **a_stack);
-int 	find_min(t_index **a_stack);
+int		bool_sorted(t_index *head);
+int		find_last(t_index **a_stack);
+int		find_max(t_index **a_stack);
+int		find_min(t_index **a_stack);
 int		ft_atoi(const char *nptr);
 int		ft_isdigit(int c);
 int		lst_size(struct s_index *head);
 long	ft_atol(const char *nptr);
-void	free_lst(t_index *a_stack, t_index *b_stack);
+void	free_lst(t_index **a_stack, t_index **b_stack);
 
 #endif

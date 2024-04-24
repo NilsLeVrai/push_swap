@@ -6,17 +6,17 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:27:33 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 18:27:41 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:53:22 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int find_last(t_index **a_stack)
+int	find_last(t_index **a_stack)
 {
 	t_index	*temp;
 	int		last;
-	
+
 	temp = *a_stack;
 	last = (*a_stack)->index;
 	while (temp)
@@ -27,11 +27,11 @@ int find_last(t_index **a_stack)
 	return (last);
 }
 
-int find_max(t_index **a_stack)
+int	find_max(t_index **a_stack)
 {
-	t_index *temp;
+	t_index	*temp;
 	int		max;
-	
+
 	temp = *a_stack;
 	max = (*a_stack)->index;
 	while (temp)
@@ -42,9 +42,10 @@ int find_max(t_index **a_stack)
 	}
 	return (max);
 }
-int find_min(t_index **a_stack)
+
+int	find_min(t_index **a_stack)
 {
-	t_index *temp;
+	t_index	*temp;
 	int		min;
 
 	temp = *a_stack;

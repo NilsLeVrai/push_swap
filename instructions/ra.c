@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:47:53 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 15:35:31 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:51:27 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ra(t_index **a_stack)
 
 	if (*a_stack && (*a_stack)->next)
 	{
-		tmp = *a_stack; 
+		tmp = *a_stack;
 		*a_stack = (*a_stack)->next;
 		last = *a_stack;
 		while (last->next)

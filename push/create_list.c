@@ -1,17 +1,26 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   create_list.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
+/*   Updated: 2024/04/24 18:50:52 by niabraha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void set_group(t_index *head)
+static void	set_group(t_index *head)
 {
 	t_index	*temp;
-	int	stack_len;
-	int	div;
+	int		stack_len;
+	int		div;
+
 	temp = head;
 	stack_len = lst_size(head);
-	printf("stack_len: %d\n", stack_len);
 	div = stack_len / 5;
-	printf("div: %d\n", div);
 	while (temp)
 	{
 		if (temp->index <= div)
@@ -60,20 +69,6 @@ void	sort_value_temp(struct s_index *head)
 		while (temp->value != temp_2->value_temp)
 			temp_2 = temp_2->next;
 		temp->index = temp_2->index_temp;
-		temp = temp->next;
-	}
-}
-
-void	print_index(struct s_index *head)
-{
-	struct s_index	*temp;
-
-	temp = head;
-	while (temp)
-	{
-		//printf("value:%d \n", temp->value);
-		//printf("index: %d \n", temp->index);
-		printf("group: %d \n", temp->group);
 		temp = temp->next;
 	}
 }
