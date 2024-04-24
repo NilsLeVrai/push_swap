@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/22 23:27:04 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:28:35 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,9 @@ void	print_index(struct s_index *head);
 ///////////////////////////////
 
 int 	bool_sorted(t_index *head);
+int 	find_last(t_index **a_stack);
+int 	find_max(t_index **a_stack);
+int 	find_min(t_index **a_stack);
 int		ft_atoi(const char *nptr);
 int		ft_isdigit(int c);
 int		lst_size(struct s_index *head);

@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/22 23:34:56 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:30:39 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,92 +28,54 @@ void check_infinite_loop() {
             printf("Two seconds have passed. Breaking out of loop.\n");
             break;
         }
-        
-
-        
     }
 }
 
 void humongus_sort(t_index **a_stack, t_index **b_stack)
 {
-	t_index	*temp_a;
-	t_index	*temp_b;
-
-	temp_a = *a_stack;
-	temp_b = *b_stack;
-	int len_a = lst_size(temp_a);
-	if (temp_b)
-		write(1, "b_stack is not empty\n", 22);
+	int len_a;
+	
+	len_a = lst_size(*a_stack);
 	while (len_a-- > 0)
 	{
-		if (temp_a->group == 1)
+		if ((*a_stack)->group == 1)
 		{
 			pb(a_stack, b_stack);
 			rb(b_stack);
 		}
-		else if (temp_a->group == 2)
-		{
+		else if ((*a_stack)->group == 2)
+
 			pb(a_stack, b_stack);
-		}
+
 		else
-		{
 			ra(a_stack);
-		}
-		temp_a = *a_stack;
-		temp_b = *b_stack;
 	}
-	len_a = lst_size(temp_a);
+	len_a = lst_size(*a_stack);
 	while (len_a--)
 	{
-		if (temp_a->group == 3)
-		{
+		if ((*a_stack)->group == 3)
 			pb(a_stack, b_stack);
-		}
 		else
-		{
 			ra(a_stack);
-		}
-		temp_a = *a_stack;
-		temp_b = *b_stack;
 	}
-	len_a = lst_size(temp_a);
+	len_a = lst_size(*a_stack);
 	while (len_a--)
 	{
-		if (temp_a->group == 4)
-		{
+		if ((*a_stack)->group == 4)
 			pb(a_stack, b_stack);
-		}
 		else
-		{
 			ra(a_stack);
-		}
-		temp_a = *a_stack;
-		temp_b = *b_stack;
 	}
-	len_a = lst_size(temp_a);
-	printf("len_a: %d\n", len_a);
-	while (len_a-- != 2)
+	len_a = lst_size(*a_stack);
+	while (len_a-- != 3)
 	{
-		if (temp_a->group == 5)
-		{
+		if ((*a_stack)->group == 5)
 			pb(a_stack, b_stack);
-		}
 		else
 		{
 			ra(a_stack);
 			printf("debug\n");
 		}
-		temp_a = *a_stack;
-		temp_b = *b_stack;
 	}
-	///////////////////////////
-	///////////////////////////
-	///////////////////////////
-	///////////////////////////
-	///////////////////////////
-	///////////////////////////
-	///////////////////////////
-	printf("------------middle------------\n");
 	final_sort(a_stack, b_stack);
-	
 }

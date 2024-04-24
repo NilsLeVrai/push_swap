@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 14:25:31 by niabraha          #+#    #+#              #
-#    Updated: 2024/04/19 17:49:32 by niabraha         ###   ########.fr        #
+#    Updated: 2024/04/24 18:29:00 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ _SRCS_I = pa.c \
 			ss.c
 
 _SRCS_U = free_lst_utils.c \
+			lst_utils.c \
 			push_swap_utils.c 
 
 SRCS_A_DIR = algo

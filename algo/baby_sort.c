@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   baby_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 16:47:53 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 15:35:31 by niabraha         ###   ########.fr       */
+/*   Created: 2024/04/22 18:40:26 by niabraha          #+#    #+#             */
+/*   Updated: 2024/04/22 18:52:25 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+# include "../includes/push_swap.h"
 
-void	ra(t_index **a_stack)
+void	baby_sort(t_index **a_stack, t_index **b_stack, int len)
 {
-	t_index	*tmp;
-	t_index	*last;
+	t_index	*temp_a;
+	t_index	*temp_b;
 
-	if (*a_stack && (*a_stack)->next)
-	{
-		tmp = *a_stack; 
-		*a_stack = (*a_stack)->next;
-		last = *a_stack;
-		while (last->next)
-			last = last->next;
-		last->next = tmp;
-		tmp->next = NULL;
-		write(1, "ra\n", 3);
-	}
+	temp_a = *a_stack;
+	temp_b = *b_stack;
+	if (temp_a || temp_b || len)
+		return ;
+	return ;
 }

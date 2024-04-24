@@ -15,7 +15,12 @@
 		"utility": "c",
 		"variant": "c",
 		"cstdlib": "c",
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"chrono": "c",
+		"random": "c",
+		"limits": "c",
+		"semaphore": "c",
+		"algorithm": "c"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }

@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   find_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 16:47:53 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 15:35:31 by niabraha         ###   ########.fr       */
+/*   Created: 2024/04/22 18:21:42 by niabraha          #+#    #+#             */
+/*   Updated: 2024/04/24 15:57:27 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+# include "../includes/push_swap.h"
 
-void	ra(t_index **a_stack)
+void find_sort(t_index **a_stack, t_index **b_stack)
 {
-	t_index	*tmp;
-	t_index	*last;
+	int	len;
 
-	if (*a_stack && (*a_stack)->next)
-	{
-		tmp = *a_stack; 
-		*a_stack = (*a_stack)->next;
-		last = *a_stack;
-		while (last->next)
-			last = last->next;
-		last->next = tmp;
-		tmp->next = NULL;
-		write(1, "ra\n", 3);
-	}
+	len = lst_size(*a_stack);
+	if (len == 2)
+		sa(a_stack);
+	else if (len <= 10)
+		baby_sort(a_stack, b_stack, len);
+	else
+		humongus_sort(a_stack, b_stack, len);
 }
