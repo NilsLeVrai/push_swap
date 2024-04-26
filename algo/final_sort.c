@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:24:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/26 17:29:32 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/26 18:59:32 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,34 @@
 
 void	final_sort(t_index **a_stack, t_index **b_stack)
 {
-	(void)*a_stack;
-	(void)*b_stack;
-	
-	printf("(*a_stack)->index = %d\n", (*a_stack)->index);
-	printf("(*a_stack)->next->index = %d\n", (*a_stack)->next->index);
-	printf("(*a_stack)->next->next->index = %d\n", (*a_stack)->next->next->index);
-	printf("(*b_stack)->index = %d\n", (*b_stack)->index);
-	printf("(*b_stack)->next->index = %d\n", (*b_stack)->next->index);
-	ra(a_stack);
-	printf("(*a_stack)->index = %d\n", (*a_stack)->index);
-	printf("(*a_stack)->next->index = %d\n", (*a_stack)->next->index);
-	printf("(*a_stack)->next->next->index = %d\n", (*a_stack)->next->next->index);
-	printf("(*b_stack)->index = %d\n", (*b_stack)->index);
-	printf("(*b_stack)->next->index = %d\n", (*b_stack)->next->index);
-	pa(a_stack, b_stack);
-	printf("(*a_stack)->index = %d\n", (*a_stack)->index);
-	printf("(*a_stack)->next->index = %d\n", (*a_stack)->next->index);
-	printf("(*a_stack)->next->next->index = %d\n", (*a_stack)->next->next->index);
-	printf("(*b_stack)->index = %d\n", (*b_stack)->index);
-	printf("(*b_stack)->next->index = %d\n", (*b_stack)->next->index);
+	int len_b = lst_size(*b_stack);
+	int cost = 0;
+	while (len_b--)
+	{
+		int max = find_max(a_stack);
+		if ((*b_stack)->index > max) // si (*b_stack)->index plus grand que tous les autres de la stack_a
+		{
+			pa(a_stack, b_stack);
+			ra(a_stack);
+			continue ;
+		}
+		else if ((*a_stack)->index > (*b_stack)->index)
+			pa(a_stack, b_stack);
+		else if ((*a_stack)->index < (*b_stack)->index)
+		{
+			while ((*a_stack)->index < (*b_stack)->index)
+			{
+				ra(a_stack);
+				cost++;
+			}
+			pa(a_stack, b_stack);
+			while (cost--)
+			{
+				rra(a_stack);
+			}
+			cost = 0;
+		}
+		rb(b_stack);
+	}
 }
 
