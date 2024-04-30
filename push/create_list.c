@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 19:48:02 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 23:18:06 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 static void	set_group(t_index *head, int len_a)
 {
 	t_index	*temp;
-	int 	group;
+	int		group;
 	int		i;
-	int 	size_group;
+	int		size_group;
 
 	if (len_a <= 10)
 		group = 2;
@@ -39,7 +39,6 @@ static void	set_group(t_index *head, int len_a)
 		i -= size_group;
 	}
 }
-
 
 static void	swap(int *a, int *b)
 {
@@ -109,6 +108,6 @@ t_index	*create_list(int argc, char **argv)
 		temp->next = NULL;
 	}
 	sort_value_temp(head);
-	set_group(head, i-1);
+	set_group(head, i - 1);
 	return (head);
 }

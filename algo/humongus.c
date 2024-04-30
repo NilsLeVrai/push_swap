@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 19:48:06 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 23:21:03 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	humongus_sort(t_index **a_stack, t_index **b_stack)
 {
-	int len_a;
+	int	len_a;
 	int	group;
-	
+
 	len_a = lst_size(*a_stack);
 	if (len_a <= 10)
 		group = 2;

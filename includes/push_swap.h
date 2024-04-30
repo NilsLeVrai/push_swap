@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 18:37:00 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 23:20:32 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include <limits.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -41,11 +40,6 @@ void	humongus_sort(t_index **a_stack, t_index **b_stack);
 void	sort_groups(t_index **a_stack, t_index **b_stack, int group);
 void	sort_three(t_index **a_stack);
 void	final_sort(t_index **a_stack, t_index **b_stack);
-
-// test !!!
-void 	test(t_index **a_stack, t_index **b_stack);
-void print_index(t_index *a_stack);
-// test !!!
 
 //////////////////////////////////////////
 ////    ___ _ __ _ __ ___  _ __ ___   ////
