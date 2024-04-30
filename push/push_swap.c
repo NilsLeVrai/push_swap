@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:33:38 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 19:03:29 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:10:55 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ int	main(int argc, char **argv)
 	error_check(argc, argv);
 	a_stack = create_list(argc, argv);
 	b_stack = NULL;
+/* 	pb(&a_stack, &b_stack);
+	pb(&a_stack, &b_stack);
+	pb(&a_stack, &b_stack);
+	pb(&a_stack, &b_stack);
+	test(&a_stack, &b_stack);
+	printf("a_stack         b_stack\n");*/
 	humongus_sort(&a_stack, &b_stack);
+	//print_index(a_stack, b_stack);
 	//free_lst(a_stack, b_stack);
 }
