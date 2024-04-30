@@ -6,75 +6,58 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:24:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 14:28:33 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:13:37 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void find_ra_or_rra(t_index **a_stack, t_index **b_stack)
+static void find_rb_or_rrb(t_index **b_stack, int max_b)
 {
-	t_index *tmp = *a_stack;
-	int len_a = lst_size(*a_stack);
-	int cost = 0;
-	//printf("index_a = %d\n", tmp->index);
-	//printf("index_b = %d\n", (*b_stack)->index);
-	while (tmp->index <  (*b_stack)->index)
+	t_index *tmp;
+	int		len_b;
+	int		cost;
+	int		cost2;
+	
+	tmp = *b_stack;
+	len_b = lst_size(*b_stack);
+	cost = 0;
+	while (tmp->index <  max_b)
 	{
 		tmp = tmp->next;
 		cost++;
 	}
-	int cost2 = len_a - cost;
-	//printf("cost = %d\n", cost);
-	if (cost < len_a/2)
+	cost2 = len_b - cost;
+	if (cost < len_b/2)
 	{
 		while (cost--)
-			ra(a_stack);
+			rb(b_stack);
 	}
 	else
 	{
 		while (cost2--)
-			rra(a_stack);
-	}
-}
-void print_index(t_index *a_stack, t_index *b_stack)
-{
-	t_index *tmp = a_stack;
-	t_index *tmp2 = b_stack;
-	while (tmp)
-	{
-		printf("index_a = %d     index_b = %d\n", tmp->index, tmp2->index);
-		tmp = tmp->next;
-		tmp2 = tmp2->next;
+			rrb(b_stack);
 	}
 }
 
 void	final_sort(t_index **a_stack, t_index **b_stack)
 {
-	int len_b = lst_size(*b_stack);
+	int len_b;
+	int max_b;
+	
+	len_b = lst_size(*b_stack);
+	max_b = find_max(b_stack);
 	while (len_b--)
 	{
-		int max = find_max(a_stack);
-		if ((*b_stack)->index > max) // si (*b_stack)->index plus grand que tous les autres de la stack_a
-		{
-			pa(a_stack, b_stack);
-			ra(a_stack);
-			continue ;
-		}
-		else if ((*a_stack)->index > (*b_stack)->index)
-			pa(a_stack, b_stack);
-		else if ((*a_stack)->index < (*b_stack)->index)
-		{
-			//test(a_stack, b_stack);
-			find_ra_or_rra(a_stack, b_stack);
-			pa(a_stack, b_stack);
-		}
-		int last = find_last(a_stack);
-		while (last < (*a_stack)->index)
-		{
-			rra(a_stack);
-			last = find_last(a_stack);
-		}
+		max_b = find_max(b_stack);
+		find_rb_or_rrb(b_stack, max_b);
+		pa(a_stack, b_stack);
 	}
 }
+
+
+/*
+trouver le max dans b_stack
+faire rb ou rrb, push a
+*/
 
