@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 19:46:26 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:48:06 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	humongus_sort(t_index **a_stack, t_index **b_stack)
 	else if (len_a <= 100)
 		group = 6;
 	else
-		group = 12;
+		group = 13;
 	sort_groups(a_stack, b_stack, group);
 	sort_three(a_stack);
 	final_sort(a_stack, b_stack);
