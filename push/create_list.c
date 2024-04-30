@@ -6,36 +6,40 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 18:50:52 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:46:29 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void	set_group(t_index *head)
+static void	set_group(t_index *head, int len_a)
 {
 	t_index	*temp;
-	int		stack_len;
-	int		div;
+	int 	group;
+	int		i;
+	int 	size_group;
 
-	temp = head;
-	stack_len = lst_size(head);
-	div = stack_len / 5;
-	while (temp)
+	if (len_a <= 10)
+		group = 2;
+	else if (len_a <= 100)
+		group = 6;
+	else
+		group = 12;
+	size_group = len_a / group;
+	i = len_a - size_group;
+	while (group--)
 	{
-		if (temp->index <= div)
-			temp->group = 1;
-		else if (temp->index <= 2 * div)
-			temp->group = 2;
-		else if (temp->index <= 3 * div)
-			temp->group = 3;
-		else if (temp->index <= 4 * div)
-			temp->group = 4;
-		else
-			temp->group = 5;
-		temp = temp->next;
+		temp = head;
+		while (temp)
+		{
+			if (temp->index >= i && temp->index < i + size_group)
+				temp->group = group;
+			temp = temp->next;
+		}
+		i -= size_group;
 	}
 }
+
 
 static void	swap(int *a, int *b)
 {
@@ -80,14 +84,14 @@ static int	check_alloc(void *ptr)
 	return (0);
 }
 
-struct s_index	*create_list(int argc, char **argv)
+t_index	*create_list(int argc, char **argv)
 {
 	struct s_index	*head;
 	struct s_index	*temp;
 	int				i;
 
 	i = 1;
-	check_alloc(head = malloc(sizeof(struct s_index)));
+	check_alloc(head = malloc(sizeof(t_index)));
 	head->value = ft_atoi(argv[i]);
 	head->value_temp = ft_atoi(argv[i]);
 	head->index = i;
@@ -105,6 +109,6 @@ struct s_index	*create_list(int argc, char **argv)
 		temp->next = NULL;
 	}
 	sort_value_temp(head);
-	set_group(head);
+	set_group(head, i-1);
 	return (head);
 }

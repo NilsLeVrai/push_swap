@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:24:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 16:13:37 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:39:27 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	final_sort(t_index **a_stack, t_index **b_stack)
 
 
 /*
-trouver le max dans b_stack
-faire rb ou rrb, push a
+trouver le max-1
 */
 

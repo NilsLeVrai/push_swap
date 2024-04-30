@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 12:13:03 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/04/30 18:37:00 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ typedef struct s_index
 //////////////////////////
 
 void	humongus_sort(t_index **a_stack, t_index **b_stack);
-void	sort_groups(t_index **a_stack, t_index **b_stack);
+void	sort_groups(t_index **a_stack, t_index **b_stack, int group);
 void	sort_three(t_index **a_stack);
 void	final_sort(t_index **a_stack, t_index **b_stack);
 
 // test !!!
 void 	test(t_index **a_stack, t_index **b_stack);
-void print_index(t_index *a_stack, t_index *b_stack);
+void print_index(t_index *a_stack);
 // test !!!
 
 //////////////////////////////////////////
