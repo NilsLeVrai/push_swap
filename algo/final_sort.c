@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:24:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 23:22:11 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 01:50:47 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ void	final_sort(t_index **a_stack, t_index **b_stack)
 		pa(a_stack, b_stack);
 		if ((*a_stack)->index == ((*a_stack)->next->index + 1))
 			sa(a_stack);
+		len_b = lst_size(*b_stack);
 	}
 }
