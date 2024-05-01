@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:15:13 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 23:14:59 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 01:53:47 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,18 @@ void	sort_groups(t_index **a_stack, t_index **b_stack, int group)
 {
 	int	len_a;
 	int	i;
+	int	max;
 
 	len_a = lst_size(*a_stack);
-	int max_index = find_max(a_stack);
-	int max_index_2 = max_index - 1;
-	int max_index_3 = max_index - 2;
+	max = find_max(a_stack);
 	i = 0;
 	while (i < group)
 	{
 		while (len_a--)
 		{
-			if ((*a_stack)->index == max_index || (*a_stack)->index == max_index_2 || (*a_stack)->index == max_index_3)
+			if ((*a_stack)->index == max || (*a_stack)->index == max - 1)
+				ra(a_stack);
+			else if ((*a_stack)->index == max - 2)
 				ra(a_stack);
 			else if ((*a_stack)->group == i)
 				pb(a_stack, b_stack);

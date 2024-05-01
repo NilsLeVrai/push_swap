@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 12:37:56 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 19:29:32 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 01:55:40 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,18 @@
 
 void	free_lst(t_index **a_stack, t_index **b_stack)
 {
-	(void)a_stack;
-	(void)b_stack;
-	return ;
+	t_index	*tmp;
+
+	while (*a_stack)
+	{
+		tmp = *a_stack;
+		*a_stack = (*a_stack)->next;
+		free(tmp);
+	}
+	while (*b_stack)
+	{
+		tmp = *b_stack;
+		*b_stack = (*b_stack)->next;
+		free(tmp);
+	}
 }
