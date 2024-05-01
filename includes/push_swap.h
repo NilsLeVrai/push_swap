@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 23:20:32 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 02:35:50 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	ss(t_index **a_stack, t_index **b_stack);
 
 t_index	*create_list(int argc, char **argv);
 void	error_check(int argc, char **argv);
-void	sort_value_temp(struct s_index *head);
+void	sort_index(struct s_index *head);
 
 ///////////////////////////////
 ////         _   _ _       ////

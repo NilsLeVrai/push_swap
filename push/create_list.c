@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/30 23:18:06 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 02:36:08 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	swap(int *a, int *b)
 	*b = nb;
 }
 
-void	sort_value_temp(struct s_index *head)
+void	sort_index(struct s_index *head)
 {
 	t_index	*temp;
 	t_index	*temp_2;
@@ -107,7 +107,7 @@ t_index	*create_list(int argc, char **argv)
 		temp->index_temp = i;
 		temp->next = NULL;
 	}
-	sort_value_temp(head);
+	sort_index(head);
 	set_group(head, i - 1);
 	return (head);
 }
