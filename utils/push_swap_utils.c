@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:41:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/01 02:40:27 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 02:42:05 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	lst_size(t_index *head)
 {
-	int				len;
 	t_index	*temp;
+	int		len;
 
 	len = 0;
 	temp = head;

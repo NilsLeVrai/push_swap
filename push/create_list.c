@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/01 02:40:27 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 02:41:54 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ t_index	*create_list(int argc, char **argv)
 {
 	t_index	*head;
 	t_index	*temp;
-	int				i;
+	int		i;
 
 	i = 1;
 	check_alloc(head = malloc(sizeof(t_index)));
