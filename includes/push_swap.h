@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/01 02:35:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 02:40:27 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_index
+typedef t_index
 {
 	int				value;
 	int				value_temp;
 	int				index;
 	int				group;
 	int				index_temp;
-	struct s_index	*next;
+	t_index	*next;
 }					t_index;
 
 //////////////////////////
@@ -89,7 +89,7 @@ void	ss(t_index **a_stack, t_index **b_stack);
 
 t_index	*create_list(int argc, char **argv);
 void	error_check(int argc, char **argv);
-void	sort_index(struct s_index *head);
+void	sort_index(t_index *head);
 
 ///////////////////////////////
 ////         _   _ _       ////
@@ -106,7 +106,7 @@ int		find_max(t_index **a_stack);
 int		find_min(t_index **a_stack);
 int		ft_atoi(const char *nptr);
 int		ft_isdigit(int c);
-int		lst_size(struct s_index *head);
+int		lst_size(t_index *head);
 long	ft_atol(const char *nptr);
 void	free_lst(t_index **a_stack, t_index **b_stack);
 

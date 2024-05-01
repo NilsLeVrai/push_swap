@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/01 02:36:08 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 02:40:27 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	swap(int *a, int *b)
 	*b = nb;
 }
 
-void	sort_index(struct s_index *head)
+void	sort_index(t_index *head)
 {
 	t_index	*temp;
 	t_index	*temp_2;
@@ -85,8 +85,8 @@ static int	check_alloc(void *ptr)
 
 t_index	*create_list(int argc, char **argv)
 {
-	struct s_index	*head;
-	struct s_index	*temp;
+	t_index	*head;
+	t_index	*temp;
 	int				i;
 
 	i = 1;
@@ -99,7 +99,7 @@ t_index	*create_list(int argc, char **argv)
 	temp = head;
 	while (argc > ++i)
 	{
-		check_alloc(temp->next = malloc(sizeof(struct s_index)));
+		check_alloc(temp->next = malloc(sizeof(t_index)));
 		temp = temp->next;
 		temp->value = ft_atoi(argv[i]);
 		temp->value_temp = ft_atoi(argv[i]);

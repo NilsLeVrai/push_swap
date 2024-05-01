@@ -6,16 +6,16 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:41:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 18:52:15 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/01 02:40:27 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	lst_size(struct s_index *head)
+int	lst_size(t_index *head)
 {
 	int				len;
-	struct s_index	*temp;
+	t_index	*temp;
 
 	len = 0;
 	temp = head;
