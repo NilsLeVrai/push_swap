@@ -6,14 +6,16 @@
 #    By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 14:25:31 by niabraha          #+#    #+#              #
-#    Updated: 2024/04/24 19:22:14 by niabraha         ###   ########.fr        #
+#    Updated: 2024/05/03 14:08:37 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME_C = checker
 NAME_P = push_swap
 
-_SRCS_A = final_sort.c \
+_SRCS_A = baby_sort.c \
+			final_sort.c \
+			find_sort.c \
 			humongus.c \
 			sort_groups.c \
 			sort_three.c
@@ -38,12 +40,25 @@ _SRCS_I = pa.c \
 			sb.c \
 			ss.c
 
+_SRCS_F = args_char.c \
+			args_digit.c \
+			args_lowerhexa.c \
+			args_percent.c \
+			args_pointer.c \
+			args_string.c \
+			args_unsigned.c \
+			args_upperhexa.c \
+			ft_printf.c \
+			ft_printf_utils.c
+			
+
 _SRCS_U = free_lst_utils.c \
 			lst_utils.c \
 			push_swap_utils.c 
 
 SRCS_A_DIR = algo
 SRCS_C_DIR = check
+SRCS_F_DIR = ft_printf
 SRCS_P_DIR = push
 SRCS_E_DIR = errors
 SRCS_I_DIR = instructions
@@ -53,12 +68,14 @@ SRCS_A = $(addprefix $(SRCS_A_DIR)/, $(_SRCS_A))
 SRCS_C = $(addprefix $(SRCS_C_DIR)/, $(_SRCS_C))
 SRCS_P = $(addprefix $(SRCS_P_DIR)/, $(_SRCS_P))
 SRCS_E = $(addprefix $(SRCS_E_DIR)/, $(_SRCS_E))
+SRCS_F = $(addprefix $(SRCS_F_DIR)/, $(_SRCS_F))
 SRCS_I = $(addprefix $(SRCS_I_DIR)/, $(_SRCS_I))
 SRCS_U = $(addprefix $(SRCS_U_DIR)/, $(_SRCS_U))
 
 SRCO_A = $(SRCS_A:.c=.o)
 SRCO_C = $(SRCS_C:.c=.o)
 SRCO_P = $(SRCS_P:.c=.o)
+SRCO_F = $(SRCS_F:.c=.o)
 SRCO_E = $(SRCS_E:.c=.o)
 SRCO_I = $(SRCS_I:.c=.o)
 SRCO_U = $(SRCS_U:.c=.o)
@@ -73,13 +90,14 @@ SRCO_C = $(SRCS_C:.c=.o)
 SRCO_P = $(SRCS_P:.c=.o)
 SRCO_E = $(SRCS_E:.c=.o)
 SRCO_I = $(SRCS_I:.c=.o)
+SRCO_F = $(SRCS_F:.c=.o)
 SRCO_U = $(SRCS_U:.c=.o)
 
-$(NAME_C) : $(SRCO_C) $(SRCO_I) $(SRCO_E) $(SRCO_U) $(SRCO_A)
-	gcc -o $(NAME_C) $(SRCO_C) $(SRCO_I) $(SRCO_E) $(SRCO_U) $(SRCO_A)
+$(NAME_C) : $(SRCO_C) $(SRCO_I) $(SRCO_E) $(SRCO_U) $(SRCO_A) $(SRCO_F)
+	gcc -o $(NAME_C) $(SRCO_C) $(SRCO_I) $(SRCO_E) $(SRCO_U) $(SRCO_A) $(SRCO_F)
 
-$(NAME_P) : $(SRCO_P) $(SRCO_I) $(SRCO_E) $(SRCO_U) $(SRCO_A)
-	gcc -o $(NAME_P) $(SRCO_P) $(SRCO_I) $(SRCO_E) $(SRCO_U) $(SRCO_A)
+$(NAME_P) : $(SRCO_P) $(SRCO_I) $(SRCO_E) $(SRCO_U) $(SRCO_A) $(SRCO_F)
+	gcc -o $(NAME_P) $(SRCO_P) $(SRCO_I) $(SRCO_E) $(SRCO_U) $(SRCO_A) $(SRCO_F)
 
 %.o : %.c
 	gcc $(FLAG) -c $< -o $@ $(INC)
@@ -91,9 +109,11 @@ clean :
 	/bin/rm -f $(SRCO_I)
 	/bin/rm -f $(SRCO_E)
 	/bin/rm -f $(SRCO_U)
+	/bin/rm -f $(SRCO_F)
 
 fclean : clean
 	/bin/rm -f $(SRCO_A)
+	/bin/rm -f $(SRCO_F)
 	/bin/rm -f $(NAME_C)
 	/bin/rm -f $(NAME_P)
 	/bin/rm -f $(SRCO_I)

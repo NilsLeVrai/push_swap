@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   humongus.c                                         :+:      :+:    :+:   */
+/*   baby_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/03 13:48:45 by niabraha         ###   ########.fr       */
+/*   Created: 2024/05/03 12:27:04 by niabraha          #+#    #+#             */
+/*   Updated: 2024/05/03 13:57:22 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+# include "../includes/push_swap.h"
 
-void	humongus_sort(t_index **a_stack, t_index **b_stack)
+void baby_sort(t_index **a_stack)
 {
 	int	len_a;
-	int	group;
 
 	len_a = lst_size(*a_stack);
-	if (len_a <= 10)
-		group = 1;
-	else if (len_a <= 100)
-		group = 6;
-	else
-		group = 13;
-	sort_groups(a_stack, b_stack, group);
-	sort_three(a_stack);
-	final_sort(a_stack, b_stack);
+	if (len_a == 2)
+		sa(a_stack);
+	else if (len_a == 3)
+		sort_three(a_stack);
 }
