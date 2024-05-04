@@ -28,4 +28,6 @@ void	free_lst(t_index **a_stack, t_index **b_stack)
 		*b_stack = (*b_stack)->next;
 		free(tmp);
 	}
+	a_stack = NULL;
+	b_stack = NULL;
 }
