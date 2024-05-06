@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 17:34:34 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:29:49 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	swap(int *a, int *b)
 	*b = nb;
 }
 
-void	sort_index(t_index *head)
+static void	sort_index(t_index *head)
 {
 	t_index	*temp;
 	t_index	*temp_2;

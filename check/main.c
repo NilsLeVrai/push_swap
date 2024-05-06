@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:33:45 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 20:18:53 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:26:56 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@ int	main(int argc, char **argv)
 {
 	(void)argc;
 	(void)argv;
-	
 	return (0);
 }
 /*

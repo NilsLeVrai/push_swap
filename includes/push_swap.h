@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 17:58:11 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:29:31 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <stdarg.h>
 
 typedef struct s_index
@@ -38,12 +37,9 @@ typedef struct s_index
 //         |___/        //
 //////////////////////////
 
-void	rb_routine(t_index **a_stack, t_index **b_stack, int max_b);
-void	rrb_routine(t_index **a_stack, t_index **b_stack, int max_b);
-void	find_rb_or_rrb(t_index **a_stack, t_index **b_stack, int max_b);
 void	baby_sort(t_index **a_stack);
 void	humongus_sort(t_index **a_stack, t_index **b_stack);
-void	sort_groups(t_index **a_stack, t_index **b_stack, int group);
+void	sort_groups(t_index **a_stack, t_index **b_stack, int group, int len_a);
 void	sort_three(t_index **a_stack);
 void	find_sort(t_index **a_stack, t_index **b_stack);
 void	final_sort(t_index **a_stack, t_index **b_stack);
@@ -121,7 +117,6 @@ void	ss(t_index **a_stack, t_index **b_stack);
 
 t_index	*create_list(int argc, char **argv);
 void	error_check(int argc, char **argv);
-void	sort_value_temp(struct s_index *head);
 
 ///////////////////////////////
 ////         _   _ _       ////

@@ -6,13 +6,13 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:24:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/03 13:43:10 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:28:44 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	rb_routine(t_index **a_stack, t_index **b_stack, int max_b)
+static void	rb_routine(t_index **a_stack, t_index **b_stack, int max_b)
 {
 	while ((*b_stack)->index != max_b)
 	{
@@ -23,7 +23,7 @@ void	rb_routine(t_index **a_stack, t_index **b_stack, int max_b)
 	}
 }
 
-void	rrb_routine(t_index **a_stack, t_index **b_stack, int max_b)
+static void	rrb_routine(t_index **a_stack, t_index **b_stack, int max_b)
 {
 	while ((*b_stack)->index != max_b)
 	{
@@ -34,7 +34,7 @@ void	rrb_routine(t_index **a_stack, t_index **b_stack, int max_b)
 	}
 }
 
-void	find_rb_or_rrb(t_index **a_stack, t_index **b_stack, int max_b)
+static void	find_rb_or_rrb(t_index **a_stack, t_index **b_stack, int max_b)
 {
 	t_index	*tmp;
 	int		len_b;
