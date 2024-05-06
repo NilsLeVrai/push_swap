@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:47:53 by niabraha          #+#    #+#             */
-/*   Updated: 2024/04/24 18:51:27 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:43:32 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	ra(t_index **a_stack)
 			last = last->next;
 		last->next = tmp;
 		tmp->next = NULL;
-		write(1, "ra\n", 3);
+		ft_printf("ra\n");
 	}
 }

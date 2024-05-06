@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 16:53:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:43:57 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	rrb(t_index **b_stack)
 		tmp->next = NULL;
 		tmp2->next = *b_stack;
 		*b_stack = tmp2;
-		write(1, "rrb\n", 4);
+		ft_printf("rrb\n");
 	}
 }

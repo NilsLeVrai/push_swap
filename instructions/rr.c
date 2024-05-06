@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:49:31 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 16:53:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:50:59 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,28 @@
 
 void	rr(t_index **a_stack, t_index **b_stack)
 {
-	ra(a_stack);
-	rb(b_stack);
-	write(1, "rr\n", 3);
+	t_index	*tmp;
+	t_index	*last;
+
+	if (*a_stack && (*a_stack)->next)
+	{
+		tmp = *a_stack;
+		*a_stack = (*a_stack)->next;
+		last = *a_stack;
+		while (last->next)
+			last = last->next;
+		last->next = tmp;
+		tmp->next = NULL;
+	}
+	if (*b_stack && (*b_stack)->next)
+	{
+		tmp = *b_stack;
+		*b_stack = (*b_stack)->next;
+		last = *b_stack;
+		while (last->next)
+			last = last->next;
+		last->next = tmp;
+		tmp->next = NULL;
+	}
+	ft_printf("rr\n");
 }

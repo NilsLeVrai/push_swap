@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:45:49 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 16:53:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:42:14 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	pa(t_index **a_stack, t_index **b_stack)
 	*b_stack = (*b_stack)->next;
 	temp->next = *a_stack;
 	*a_stack = temp;
-	write(1, "pa\n", 3);
+	ft_printf("pa\n");
 }

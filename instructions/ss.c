@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:43:32 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 16:53:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:47:48 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,22 @@
 
 void	ss(t_index **a_stack, t_index **b_stack)
 {
-	sa(a_stack);
-	sb(b_stack);
-	write(1, "ss\n", 3);
+	t_index	*tmp_a;
+	t_index	*tmp_b;
+
+	tmp_a = *a_stack;
+	if (*a_stack && (*a_stack)->next)
+	{
+		*a_stack = (*a_stack)->next;
+		tmp_a->next = (*a_stack)->next;
+		(*a_stack)->next = tmp_a;
+	}
+	tmp_b = *b_stack;
+	if (*b_stack && (*b_stack)->next)
+	{
+		*b_stack = (*b_stack)->next;
+		tmp_b->next = (*b_stack)->next;
+		(*b_stack)->next = tmp_b;
+	}
+	ft_printf("ss\n");
 }

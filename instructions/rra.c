@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:49:45 by niabraha          #+#    #+#             */
-/*   Updated: 2024/03/28 16:53:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:43:53 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	rra(t_index **a_stack)
 		tmp->next = NULL;
 		last->next = *a_stack;
 		*a_stack = last;
-		write(1, "rra\n", 4);
+		ft_printf("rra\n");
 	}
 }
