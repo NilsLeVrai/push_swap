@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/03 14:23:38 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:58:11 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	baby_sort(t_index **a_stack);
 void	humongus_sort(t_index **a_stack, t_index **b_stack);
 void	sort_groups(t_index **a_stack, t_index **b_stack, int group);
 void	sort_three(t_index **a_stack);
-void 	find_sort(t_index **a_stack, t_index **b_stack);
+void	find_sort(t_index **a_stack, t_index **b_stack);
 void	final_sort(t_index **a_stack, t_index **b_stack);
 
 //////////////////////////////////////////
@@ -72,19 +72,19 @@ void	is_sorted(int argc, char **argv);
 //////////////////////////////////////////////
 
 char	*ft_strchr(const char *s, int c);
-int	args_char(va_list args);
-int	args_digit(va_list args);
-int	args_lowerhexa(va_list args);
-int args_percent(void);
-int	args_pointer(va_list args);
-int	args_string(va_list args);
-int	args_unsigned(va_list args);
-int	args_upperhexa(va_list args);
-int	ft_printf(const char *format, ...);
-int	ft_putchar_fd_safe(char c, int fd);
-int	ft_putstr_safe(char *s);
-int	ft_putnbr_base(unsigned long n, const char *base);
-int	ft_putnbr_unsigned_fd_safe(unsigned int n, int fd);
+int		args_char(va_list args);
+int		args_digit(va_list args);
+int		args_lowerhexa(va_list args);
+int		args_percent(void);
+int		args_pointer(va_list args);
+int		args_string(va_list args);
+int		args_unsigned(va_list args);
+int		args_upperhexa(va_list args);
+int		ft_printf(const char *format, ...);
+int		ft_putchar_fd_safe(char c, int fd);
+int		ft_putstr_safe(char *s);
+int		ft_putnbr_base(unsigned long n, const char *base);
+int		ft_putnbr_unsigned_fd_safe(unsigned int n, int fd);
 size_t	ft_strlen(const char *s);
 
 ///////////////////////////////////////////////////////////////////

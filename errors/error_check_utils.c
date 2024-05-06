@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 16:44:16 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/03 14:29:12 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:59:03 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,10 @@ void	check_outrange_int(int argc, char **argv)
 	while (i < argc)
 	{
 		if (ft_atol(argv[i]) > 2147483647 || ft_atol(argv[i]) < -2147483648)
-			{
-				ft_putstr_safe("Error\n");
-				exit(EXIT_FAILURE);
-			}
+		{
+			ft_putstr_safe("Error\n");
+			exit(EXIT_FAILURE);
+		}
 		i++;
 	}
 }

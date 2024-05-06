@@ -6,21 +6,11 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:15:13 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 17:06:03 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:59:50 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-/* void sort_max(t_index **a_stack, t_index **b_stack, int max)
-{
-	int max;
-
-	max = find_max(a_stack);
-	while ((*a_stack)->index != max)
-		ra(a_stack);
-	pb(a_stack, b_stack);
-} */
 
 void	sort_groups(t_index **a_stack, t_index **b_stack, int group)
 {
