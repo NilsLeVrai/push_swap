@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 16:44:16 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 19:14:21 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:03:20 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,4 @@ void	checking_args(int argc, char **argv)
 	if (argc < 2 && argv[1] == NULL)
 		exit(EXIT_SUCCESS);
 	return ;
-	
 }
