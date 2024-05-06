@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:41:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/01 02:42:05 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 19:07:50 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,21 @@ long	ft_atol(const char *nptr)
 {
 	long	res;
 	long	neg;
-	int		i;
 
 	res = 0;
 	neg = 1;
-	i = 0;
-	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if (nptr[i] == 43 || nptr[i] == 45)
+	while (*nptr == 32 || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	if (*nptr == 43 || *nptr == 45)
 	{
-		if (nptr[i] == 45)
+		if (*nptr == 45)
 			neg *= (-1);
-		i++;
+		nptr++;
 	}
-	while (nptr[i] >= 48 && nptr[i] <= 57)
+	while (*nptr >= 48 && *nptr <= 57)
 	{
-		res = res * 10 + nptr[i] - 48;
-		if (res > INT_MAX || (res > (long)INT_MAX + 1 && neg == -1))
-			exit((write(2, "Error\n", 6), EXIT_FAILURE));
-		i++;
+		res = res * 10 + *nptr - 48;
+		nptr++;
 	}
 	return (res * neg);
 }
