@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:52:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 20:04:12 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:18:50 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,3 @@ void	humongus_sort(t_index **a_stack, t_index **b_stack)
 	sort_three(a_stack);
 	final_sort(a_stack, b_stack);
 }
-
-/*
-checker;
-regrader si les args sont valid, les ajouter a la liste avec gnl
-checker les instrcutions (l'ecriture)
-si y'a une instruction ecrite, la faire
-*/
