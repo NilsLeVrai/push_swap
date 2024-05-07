@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:35:24 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 20:29:31 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:21:18 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ typedef struct s_index
 //////////////////////////
 
 void	baby_sort(t_index **a_stack);
+void	final_sort(t_index **a_stack, t_index **b_stack);
+void	find_sort(t_index **a_stack, t_index **b_stack);
 void	humongus_sort(t_index **a_stack, t_index **b_stack);
 void	sort_groups(t_index **a_stack, t_index **b_stack, int group, int len_a);
 void	sort_three(t_index **a_stack);
-void	find_sort(t_index **a_stack, t_index **b_stack);
-void	final_sort(t_index **a_stack, t_index **b_stack);
 
 //////////////////////////////////////////
 ////    ___ _ __ _ __ ___  _ __ ___   ////
@@ -127,7 +127,6 @@ void	error_check(int argc, char **argv);
 ////   \__,_|\__|_|_|___/  ////
 ///////////////////////////////
 
-int		bool_sorted(t_index *head);
 int		find_last(t_index **a_stack);
 int		find_max(t_index **a_stack);
 int		find_min(t_index **a_stack);

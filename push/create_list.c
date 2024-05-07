@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 20:29:49 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:05:20 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	set_group(t_index *head, int len_a)
 	if (len_a <= 10)
 		group = 1;
 	else if (len_a <= 100)
-		group = 6;
+		group = 7;
 	else
 		group = 17;
 	size_group = len_a / group;
