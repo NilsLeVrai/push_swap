@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 14:25:31 by niabraha          #+#    #+#              #
-#    Updated: 2024/05/08 01:19:54 by niabraha         ###   ########.fr        #
+#    Updated: 2024/05/13 20:42:56 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,7 @@ $(NAME_P) : $(SRCO_A) $(SRCO_E) $(SRCO_F) $(SRCO_I) $(SRCO_P) $(SRCO_U)
 	gcc -o $(NAME_P) $(SRCO_A) $(SRCO_E) $(SRCO_F) $(SRCO_I) $(SRCO_P) $(SRCO_U)
 
 %.o : %.c
-	gcc $(FLAG) -c $< -o $@ $(INC)
+	cc $(FLAG) -c $< -o $@ $(INC)
 
 clean :
 	/bin/rm -f $(SRCO_A)
