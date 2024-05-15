@@ -90,7 +90,9 @@ t_index	*create_list(int argc, char **argv)
 	int		i;
 
 	i = 1;
-	check_alloc(head = malloc(sizeof(t_index)));
+	head = malloc(sizeof(t_index));
+	if (!head)
+		return (NULL);
 	head->value = ft_atoi(argv[i]);
 	head->value_temp = ft_atoi(argv[i]);
 	head->index = i;
@@ -99,7 +101,9 @@ t_index	*create_list(int argc, char **argv)
 	temp = head;
 	while (argc > ++i)
 	{
-		check_alloc(temp->next = malloc(sizeof(t_index)));
+		temp->next = malloc(sizeof(t_index));
+		if (!temp->next)
+			return (free_lst(&head, NULL), NULL);
 		temp = temp->next;
 		temp->value = ft_atoi(argv[i]);
 		temp->value_temp = ft_atoi(argv[i]);
