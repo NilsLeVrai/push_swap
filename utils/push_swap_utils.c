@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:41:57 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/06 19:07:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:52:04 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,18 +80,4 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	return (res * neg);
-}
-
-int	bool_sorted(t_index *head)
-{
-	t_index	*temp;
-
-	temp = head;
-	while (temp->next != NULL)
-	{
-		if (temp->value > temp->next->value)
-			return (1);
-		temp = temp->next;
-	}
-	return (0);
 }

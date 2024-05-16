@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 16:44:16 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/13 20:43:10 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:03:20 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	check_duplicates(int argc, char **argv)
 		{
 			if (ft_atol(argv[i]) == ft_atol(argv[j]))
 			{
-				ft_putstr_safe("Error");
+				ft_putstr_safe("Error\n");
 				exit(EXIT_FAILURE);
 			}
 			j++;
@@ -65,7 +65,7 @@ void	check_not_number(int argc, char **argv)
 				j++;
 			if (ft_isdigit(argv[i][j]) == 0)
 			{
-				ft_putstr_safe("Error");
+				ft_putstr_safe("Error\n");
 				exit(EXIT_FAILURE);
 			}
 			j++;
@@ -83,9 +83,10 @@ void	check_outrange_int(int argc, char **argv)
 	{
 		if (ft_atol(argv[i]) > 2147483647 || ft_atol(argv[i]) < -2147483648)
 		{
-			ft_putstr_safe("Error");
+			ft_putstr_safe("Error\n");
 			exit(EXIT_FAILURE);
 		}
+		i++;
 	}
 }
 

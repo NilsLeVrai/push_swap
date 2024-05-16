@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/20 14:25:31 by niabraha          #+#    #+#              #
-#    Updated: 2024/05/13 20:42:56 by niabraha         ###   ########.fr        #
+#    Updated: 2024/05/16 13:05:02 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,39 +74,41 @@ SRCO_I = $(SRCS_I:.c=.o)
 SRCO_P = $(SRCS_P:.c=.o)
 SRCO_U = $(SRCS_U:.c=.o)
 
-FLAG = -Wall -Wextra -Werror
+FLAG = -g3 -Wall -Wextra -Werror
 INC = -I includes/
 
-all : $(NAME_C) $(NAME_P)
+RED = \033[0;31m
+GREEN = \033[0;32m
+YELLOW = \033[0;33m
+NO_COLOR = \033[0m
 
-SRCO_A = $(SRCS_A:.c=.o)
-SRCO_E = $(SRCS_E:.c=.o)
-SRCO_F = $(SRCS_F:.c=.o)
-SRCO_I = $(SRCS_I:.c=.o)
-SRCO_P = $(SRCS_P:.c=.o)
-SRCO_U = $(SRCS_U:.c=.o)
+all : $(NAME_P)
 
 $(NAME_P) : $(SRCO_A) $(SRCO_E) $(SRCO_F) $(SRCO_I) $(SRCO_P) $(SRCO_U)
-	gcc -o $(NAME_P) $(SRCO_A) $(SRCO_E) $(SRCO_F) $(SRCO_I) $(SRCO_P) $(SRCO_U)
+	@cc -o $(NAME_P) $(SRCO_A) $(SRCO_E) $(SRCO_F) $(SRCO_I) $(SRCO_P) $(SRCO_U)
+	@echo "$(GREEN)All files have been compiled ✅$(NO_COLOR)"
 
 %.o : %.c
-	cc $(FLAG) -c $< -o $@ $(INC)
+	@cc $(FLAG) -c -o $@ $< $(INC)
 
 clean :
-	/bin/rm -f $(SRCO_A)
-	/bin/rm -f $(SRCO_E)
-	/bin/rm -f $(SRCO_F)
-	/bin/rm -f $(SRCO_I)
-	/bin/rm -f $(SRCO_P)
-	/bin/rm -f $(SRCO_U)
+	@/bin/rm -f $(SRCO_A)
+	@/bin/rm -f $(SRCO_E)
+	@/bin/rm -f $(SRCO_F)
+	@/bin/rm -f $(SRCO_I)
+	@/bin/rm -f $(SRCO_P)
+	@/bin/rm -f $(SRCO_U)
+	@echo "$(YELLOW)Make clean done! 🤡$(NO_COLOR)"
+	
 
 fclean : clean
-	/bin/rm -f $(SRCO_A)
-	/bin/rm -f $(SRCO_E)
-	/bin/rm -f $(SRCO_F)
-	/bin/rm -f $(SRCO_I)
-	/bin/rm -f $(NAME_P)
-	/bin/rm -f $(SRCO_U)
+	@/bin/rm -f $(SRCO_A)
+	@/bin/rm -f $(SRCO_E)
+	@/bin/rm -f $(SRCO_F)
+	@/bin/rm -f $(SRCO_I)
+	@/bin/rm -f $(NAME_P)
+	@/bin/rm -f $(SRCO_U)
+	@echo "$(RED)Make fclean done! 🚮$(NO_COLOR)"
 
 re :
 	make fclean

@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:50:14 by niabraha          #+#    #+#             */
-/*   Updated: 2024/05/08 01:05:20 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:51:42 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,13 @@ static void	sort_index(t_index *head)
 	}
 }
 
-static int	check_alloc(void *ptr)
+static void	create_head(t_index *head, char **argv)
 {
-	if (!ptr)
-		exit(EXIT_FAILURE);
-	return (0);
+	head->value = ft_atoi(argv[1]);
+	head->value_temp = ft_atoi(argv[1]);
+	head->index = 1;
+	head->index_temp = 1;
+	head->next = NULL;
 }
 
 t_index	*create_list(int argc, char **argv)
@@ -93,11 +95,7 @@ t_index	*create_list(int argc, char **argv)
 	head = malloc(sizeof(t_index));
 	if (!head)
 		return (NULL);
-	head->value = ft_atoi(argv[i]);
-	head->value_temp = ft_atoi(argv[i]);
-	head->index = i;
-	head->index_temp = i;
-	head->next = NULL;
+	create_head(head, argv);
 	temp = head;
 	while (argc > ++i)
 	{
